@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import myImage from "./assets/Cartoon.png";
 import About from "./components/About/About";
 import meWithMac from "./assets/Cartoon.png";
+import Skill from "./components/Skills/Skill";
 
 function App() {
 	return (
@@ -24,8 +25,12 @@ function App() {
 					description="I build interesting things that live on the Internet! 🚀 \n I love to transform ideas into reality using code and developing web-apps using the latest front-end technologies and full fleged APIs.\nCurrently I'm learning Typescript and Chakra UI."
 					hasCallToAction={true}
 					callToActionMessage="Connect with me"
+					callToActionHandler={() => {
+						alert("this action is under construction...");
+					}}
 				/>
 				<About image={meWithMac} />
+				<Skill />
 			</Box>
 		</div>
 	);
