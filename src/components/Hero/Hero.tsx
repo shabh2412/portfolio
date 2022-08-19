@@ -29,7 +29,7 @@ const Hero = ({
 	callToActionHandler = () => {},
 }: Props) => {
 	return (
-		<CustomSection id={elementId} waveOption={2}>
+		<CustomSection id={elementId} waveOption={2} waveColor="#153e75">
 			<HStack height="65vh" py="10" justifyContent="center" alignItems="center">
 				<Box flexGrow="1" textAlign="center">
 					<Text

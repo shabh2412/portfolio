@@ -12,7 +12,7 @@ type Props = {
 
 const About = ({ image }: Props) => {
 	return (
-		<CustomSection id="about" waveOption={3}>
+		<CustomSection id="about" bg="brand.800" waveOption={4}>
 			<Title title="About Me" />
 			<Flex
 				bg="transparent"
@@ -122,7 +122,7 @@ const About = ({ image }: Props) => {
 									href="https://github.com/shabh2412"
 									isExternal
 									bg="transparent"
-									color="secondary"
+									color="white"
 									border="1px solid #5F85DB"
 									px={5}
 									py={3}
@@ -130,7 +130,7 @@ const About = ({ image }: Props) => {
 									rounded="3xl"
 									transition="0.5s all ease-in-out"
 									_hover={{
-										bg: "secondary",
+										bg: "primary",
 										color: "white",
 										border: "1px solid #5F85DB",
 										transition: "0.5s all ease-in-out",
