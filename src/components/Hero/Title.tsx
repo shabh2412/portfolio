@@ -5,11 +5,23 @@ type Props = {
 	title: string;
 	className?: string;
 	size?: string;
+	fontWeight?: string;
+	textDecoration?: string;
 };
 
-const Title = ({ title, className = "", size = "6xl" }: Props) => {
+const Title = ({
+	title,
+	className = "",
+	size = "6xl",
+	fontWeight = "extrabold",
+	textDecoration = "underline",
+}: Props) => {
 	return (
-		<Text fontSize={size} fontWeight="extrabold" className={className}>
+		<Text
+			fontSize={size}
+			fontWeight={fontWeight}
+			className={className}
+			textDecoration={textDecoration}>
 			{title}.
 		</Text>
 	);
