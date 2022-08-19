@@ -4,6 +4,16 @@
 	top: 0;
 }
 
-.tprim {
+.tprim,
+.tsec {
 	color: white;
+	transition: 0.5s all;
+}
+
+.tprim:hover,
+.tsec:hover {
+	transition: 0.5s all;
+	text-decoration: underline;
+	cursor: pointer;
+	color: #3c9fea;
 }

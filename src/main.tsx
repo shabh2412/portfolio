@@ -21,6 +21,7 @@ const colors = {
 	primary: "#0e1629",
 	secondary: "#5F85DB",
 	dark: "#26282B",
+	bluedark: "rgb(137,147,177)",
 	bg: {
 		lightGray: "#a6a6a6",
 		dark: "#0e1629",

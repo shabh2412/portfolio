@@ -7,10 +7,13 @@ type Props = {
 
 const Description = ({ text }: Props) => {
 	return (
-		<Box color="whiteAlpha.900">
+		<Box color="bluedark">
 			{text.split("\\n").map((str) => {
-				console.log(str);
-				return <Text fontSize="lg" key={str.length.toString() + str}>{str}</Text>;
+				return (
+					<Text fontSize="lg" key={str.length.toString() + str}>
+						{str}
+					</Text>
+				);
 			})}
 		</Box>
 	);

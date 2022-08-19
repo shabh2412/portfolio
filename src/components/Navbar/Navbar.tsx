@@ -7,8 +7,9 @@ import NavItem from "./NavItem";
 type Props = {};
 
 const Navbar = (props: Props) => {
+	const topSection = useScrollSection("top");
 	const aboutSection = useScrollSection("about");
-	const educationSection = useScrollSection("education");
+	const contactSection = useScrollSection("contact");
 	const skillsSection = useScrollSection("skills");
 	const projectSection = useScrollSection("project");
 	return (
@@ -19,12 +20,10 @@ const Navbar = (props: Props) => {
 			p="5"
 			fontSize="lg">
 			<Box>
-				<NavLink to="/">
-					<Heading>
-						<span className={style.tprim}>R</span>
-						<span>P</span>
-					</Heading>
-				</NavLink>
+				<Heading onClick={topSection.onClick}>
+					<span className={style.tprim}>R</span>
+					<span className={style.tsec}>P</span>
+				</Heading>
 			</Box>
 			<Spacer />
 			<HStack>
@@ -32,13 +31,13 @@ const Navbar = (props: Props) => {
 					<NavItem sectionHandler={aboutSection}>About</NavItem>
 				</Box>
 				<Box>
-					<NavLink to="#education">Education</NavLink>
+					<NavItem sectionHandler={skillsSection}>Skills</NavItem>
 				</Box>
 				<Box>
-					<NavLink to="#skills">Skills</NavLink>
+					<NavItem sectionHandler={projectSection}>Projects</NavItem>
 				</Box>
 				<Box>
-					<NavLink to="#projects">Projects</NavLink>
+					<NavItem sectionHandler={contactSection}>Contact</NavItem>
 				</Box>
 			</HStack>
 		</HStack>
