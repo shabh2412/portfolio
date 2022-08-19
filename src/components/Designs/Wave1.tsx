@@ -1,8 +1,11 @@
-import React from "react";
+/**
+ *
+ * @param
+ * @credits: https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections
+ * @returns an SVG With a wave pattern
+ */
 
-type Props = {};
-
-const Wave = (props: Props) => {
+const Wave = () => {
 	return (
 		<div style={{ height: "150px", overflow: "hidden" }}>
 			<svg
