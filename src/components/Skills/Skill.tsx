@@ -43,6 +43,7 @@ const Skill = (props: Props) => {
 					width={["90%", "80%", "90%%"]}
 					justify="center"
 					spacingY="40px"
+          mb="20"
 					// gridTemplateColumns="repeat(4,1fr)"
 					// gridTemplateRows="repeat(3,50px)"
 				>
