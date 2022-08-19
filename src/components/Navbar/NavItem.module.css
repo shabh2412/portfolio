@@ -1,0 +1,11 @@
+.navItem {
+	cursor: pointer;
+	transition: 0.5s ease-in-out;
+}
+.navItem:hover {
+	/* text-decoration: underline; */
+	transition: 0.5s ease-in-out;
+	box-shadow: 0px 10px 300px #fff;
+	/* transform: translateX(-20px); */
+	/* transform: rotate(20deg); */
+}
