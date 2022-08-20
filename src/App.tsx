@@ -6,15 +6,12 @@ import About from "./components/About/About";
 import meWithMac from "./assets/Cartoon.png";
 import Skill from "./components/Skills/Skill";
 import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 	return (
-		<div
-			className="App"
-			// TODO: Remove this style later on
-			style={{
-				height: "1000vh",
-			}}>
+		<div className="App">
 			<Navbar />
 			<Box bg="primary" color="white">
 				<Hero
@@ -33,6 +30,8 @@ function App() {
 				<About image={meWithMac} />
 				<Skill />
 				<Projects />
+				<Contact />
+				<Footer />
 			</Box>
 		</div>
 	);

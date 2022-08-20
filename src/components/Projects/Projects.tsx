@@ -1,5 +1,3 @@
-import { Box } from "@chakra-ui/layout";
-import React from "react";
 import Title from "../Hero/Title";
 import CustomSection from "../SectionComponent/CustomSection";
 import Project from "./Project";
@@ -31,7 +29,7 @@ const projects: project[] = [
 	},
 	{
 		image: indiamart,
-		title: "IndiaMART Clone",
+		title: "IndiaMART Clone [Group Project]",
 		description:
 			"This is a clone of e-commerce website named as IndiaMART. Users can search for products, view product details, place product request.",
 		projectLink: "https://indiamart-clone-masai.netlify.app/",
@@ -39,7 +37,7 @@ const projects: project[] = [
 	},
 	{
 		image: fraazoClone,
-		title: "Fraazo Clone",
+		title: "Fraazo Clone [Group Project]",
 		description:
 			"This is a clone of e-commerce website named as Fraazo. Users can buy groceries on this platform. Generates a random array of items and displays it in deal of the day section. Pages: Home Page, Products Listing Page, Product Details Page, User Detail Page, Cart, Checkout & Payment Page.",
 		projectLink: "https://fraazo-clone.netlify.app/",
@@ -75,10 +73,11 @@ const Projects = (props: Props) => {
 	return (
 		<CustomSection id="projects" bg="brand.800" waveOption={4}>
 			<Title
-				title="Here are some of my cool work!"
+				title="Few Things I've Built!"
 				fontWeight="bold"
 				size="5xl"
 			/>
+
 			{projects.map((project, id) => (
 				<Project
 					key={id + project.title}

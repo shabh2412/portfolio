@@ -7,6 +7,7 @@ type Props = {
 	size?: string;
 	fontWeight?: string;
 	textDecoration?: string;
+	color?: string;
 };
 
 const Title = ({
@@ -15,14 +16,16 @@ const Title = ({
 	size = "6xl",
 	fontWeight = "extrabold",
 	textDecoration = "underline",
+	color = undefined,
 }: Props) => {
 	return (
 		<Text
 			fontSize={size}
 			fontWeight={fontWeight}
 			className={className}
+			color={color || "white"}
 			textDecoration={textDecoration}>
-			{title}.
+			{title}
 		</Text>
 	);
 };
