@@ -8,8 +8,10 @@ import Skill from "./components/Skills/Skill";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import { useScrollSection } from "react-scroll-section";
 
 function App() {
+	const connectSection = useScrollSection("contact");
 	return (
 		<div className="App">
 			<Navbar />
@@ -24,7 +26,8 @@ function App() {
 					hasCallToAction={true}
 					callToActionMessage="Connect with me"
 					callToActionHandler={() => {
-						alert("this action is under construction...");
+						// alert("this action is under construction...");
+						window.open("https://linkedin.com/in/rishabh-panesar");
 					}}
 				/>
 				<About image={meWithMac} />
