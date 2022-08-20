@@ -25,7 +25,7 @@ const projects: project[] = [
 		description:
 			"Simple Todo app that offers CRUD operations. Tech Stack used: Chakra UI, ReactJS, TypeScript, Redux, JSON Server.",
 		projectLink: "https://todo-tsx.vercel.app/",
-		githubLink: "https://github.com/shabh2412/Indiamart-Clone",
+		githubLink: "",
 	},
 	{
 		image: indiamart,
