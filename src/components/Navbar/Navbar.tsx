@@ -11,7 +11,7 @@ const Navbar = (props: Props) => {
 	const aboutSection = useScrollSection("about");
 	const contactSection = useScrollSection("contact");
 	const skillsSection = useScrollSection("skills");
-	const projectSection = useScrollSection("project");
+	const projectSection = useScrollSection("projects");
 	return (
 		<HStack
 			bg="blackAlpha.900"

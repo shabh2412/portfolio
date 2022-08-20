@@ -5,6 +5,7 @@ import myImage from "./assets/Cartoon.png";
 import About from "./components/About/About";
 import meWithMac from "./assets/Cartoon.png";
 import Skill from "./components/Skills/Skill";
+import Projects from "./components/Projects/Projects";
 
 function App() {
 	return (
@@ -31,6 +32,7 @@ function App() {
 				/>
 				<About image={meWithMac} />
 				<Skill />
+				<Projects />
 			</Box>
 		</div>
 	);
