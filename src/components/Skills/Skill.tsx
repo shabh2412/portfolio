@@ -25,6 +25,15 @@ const skills = [
 	"mongodb",
 	"nodejs",
 	"express",
+	"python",
+	"fastapi",
+	"nextjs",
+	"heroku",
+	"redux",
+	"git",
+	"github",
+	"markdown",
+	"materialui",
 ];
 
 const Skill = (props: Props) => {
@@ -32,6 +41,7 @@ const Skill = (props: Props) => {
 		<CustomSection id="skills" waveOption={3}>
 			<Title title="Skills 🔥" size="5xl" />
 			<Flex
+				my="20"
 				mx="auto"
 				maxW="container.xl"
 				// border="1px solid green"
@@ -43,7 +53,6 @@ const Skill = (props: Props) => {
 					width={["90%", "80%", "90%%"]}
 					justify="center"
 					spacingY="40px"
-          mb="20"
 					// gridTemplateColumns="repeat(4,1fr)"
 					// gridTemplateRows="repeat(3,50px)"
 				>
@@ -51,12 +60,12 @@ const Skill = (props: Props) => {
 						<WrapItem
 							// border="1px solid red"
 							p="2"
-							width={["20%", "10%"]}>
+							key={skill}
+							width={["20%", "25%","15%","10%"]}>
 							<Image
 								rounded="md"
 								margin="auto"
-								key={skill}
-								bg="secondary"
+								bg="whiteAlpha.200"
 								p="3"
 								style={{
 									transition: "0.25s all ease-in-out",
