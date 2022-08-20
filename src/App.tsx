@@ -24,10 +24,12 @@ function App() {
 					image={myImage}
 					description="I build interesting things that live on the Internet! 🚀 \n I love to transform ideas into reality using code and developing web-apps using the latest front-end technologies and full fleged APIs.\nCurrently I'm learning Typescript and Chakra UI."
 					hasCallToAction={true}
-					callToActionMessage="Connect with me"
+					callToActionMessage="My Resume"
 					callToActionHandler={() => {
 						// alert("this action is under construction...");
-						window.open("https://linkedin.com/in/rishabh-panesar");
+						window.open(
+							"https://drive.google.com/file/d/1zKeePKV_O8bri3F_SfKDGvHE1dV4nOM7/view?usp=sharing"
+						);
 					}}
 				/>
 				<About image={meWithMac} />
