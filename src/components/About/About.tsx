@@ -5,6 +5,7 @@ import React from "react";
 import Title from "../Hero/Title";
 import { Section } from "react-scroll-section";
 import CustomSection from "../SectionComponent/CustomSection";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 type Props = {
 	image: string;
@@ -16,15 +17,12 @@ const About = ({ image }: Props) => {
 			<Title title="About Me" />
 			<Flex
 				bg="transparent"
-				_dark={{
-					bg: "#3e3e3e",
-				}}
 				p={50}
 				w="full"
 				alignItems="center"
 				justifyContent="center">
 				<Box
-					bg="transparent"
+					bg="primary"
 					borderBottom="2px solid #5F85DB"
 					borderEnd="2px solid #5F85DB"
 					p="5"
@@ -121,23 +119,24 @@ const About = ({ image }: Props) => {
 								<Link
 									href="https://github.com/shabh2412"
 									isExternal
-									bg="transparent"
-									color="white"
+									bg="white"
+									color="black"
 									border="1px solid #5F85DB"
 									px={5}
 									py={3}
 									fontWeight="semibold"
 									rounded="3xl"
 									transition="0.5s all ease-in-out"
+									boxShadow="rgba(42, 105, 172, 0.5) 0px 5px 20px, rgba(42, 105, 172, 0.22) 0px 15px 12px"
 									_hover={{
 										bg: "primary",
 										color: "white",
 										border: "1px solid #5F85DB",
 										transition: "0.5s all ease-in-out",
 										boxShadow:
-											"rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
+											"rgba(42, 105, 172, 0.5) 0px 10px 38px, rgba(42, 105, 172, 0.5) 0px 0px 12px",
 									}}>
-									My GitHub
+									My GitHub <ExternalLinkIcon />
 								</Link>
 							</Box>
 						</Box>
