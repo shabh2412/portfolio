@@ -21,9 +21,6 @@ const Project = ({
 		<Flex
 			className={style.projectCard}
 			bg="transparent"
-			_dark={{
-				bg: "#3e3e3e",
-			}}
 			p={50}
 			w="full"
 			alignItems="center"
@@ -61,22 +58,24 @@ const Project = ({
 						lg: "50%",
 					}}>
 					<Box>
-						<Image
-							objectFit="fill"
-							src={image}
-							border="1px solid"
-							borderColor="primary"
-							transition="0.25s ease-in-out;"
-							_hover={{
-								transition: "0.25s ease-in-out",
-								// boxShadow: "0px 5px 10px #0e1629",
-								filter: "brightness(50%)",
-								cursor: "pointer",
-							}}
-							rounded={{
-								lg: "lg",
-							}}
-						/>
+						<ChLink isExternal href={projectLink}>
+							<Image
+								objectFit="fill"
+								src={image}
+								border="1px solid"
+								borderColor="primary"
+								transition="0.25s ease-in-out;"
+								_hover={{
+									transition: "0.25s ease-in-out",
+									// boxShadow: "0px 5px 10px #0e1629",
+									filter: "brightness(50%)",
+									cursor: "pointer",
+								}}
+								rounded={{
+									lg: "lg",
+								}}
+							/>
+						</ChLink>
 					</Box>
 				</Box>
 
