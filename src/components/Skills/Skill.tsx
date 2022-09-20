@@ -39,7 +39,7 @@ const skills = [
 const Skill = (props: Props) => {
 	return (
 		<CustomSection id="skills" waveOption={3}>
-			<Title title="Skills 🔥" size="5xl" color="secondary" />
+			<Title title="Skills🔥" size="5xl" textDecoration="none" />
 			<Flex
 				my="20"
 				mx="auto"
