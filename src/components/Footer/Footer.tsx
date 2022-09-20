@@ -8,9 +8,6 @@ const Footer = (props: Props) => {
 		<Flex
 			w="full"
 			bg="primary"
-			_dark={{
-				bg: "#3e3e3e",
-			}}
 			p={50}
 			alignItems="center"
 			justifyContent="center">
@@ -24,19 +21,13 @@ const Footer = (props: Props) => {
 				align="center"
 				justify="center"
 				px="6"
-				py="4"
-				_dark={{
-					bg: "gray.800",
-				}}>
+				py="4">
 				<chakra.p
 					py={{
 						base: "2",
 						sm: "0",
 					}}
-					color="whiteAlpha.800"
-					_dark={{
-						color: "white",
-					}}>
+					color="whiteAlpha.800">
 					Designed & Built by{"  "}
 					<span>
 						<Link
