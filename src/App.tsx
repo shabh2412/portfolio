@@ -28,7 +28,7 @@ function App() {
 					callToActionHandler={() => {
 						// alert("this action is under construction...");
 						window.open(
-							"https://drive.google.com/file/d/1zKeePKV_O8bri3F_SfKDGvHE1dV4nOM7/view?usp=sharing"
+							"https://drive.google.com/file/d/1bztSe7jZd390B9SV-mLpyeDpCjdd7UlZ/view?usp=sharing"
 						);
 					}}
 				/>
