@@ -166,7 +166,9 @@ const Project = ({
 						{techStack.length > 0 &&
 							techStack.map((stack, index) => (
 								<Text
-									border="1px solid white"
+									color="brand.700"
+									border="1px solid"
+									borderColor={"brand.700"}
 									borderRadius="md"
 									style={{
 										transform: "skewX(-10deg)",
