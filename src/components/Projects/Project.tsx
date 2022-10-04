@@ -1,4 +1,4 @@
-import { Box, Flex, Link as ChLink, Stack } from "@chakra-ui/layout";
+import { Box, Flex, Link as ChLink, Stack, Text } from "@chakra-ui/layout";
 import { chakra, Image } from "@chakra-ui/react";
 import style from "./Project.module.css";
 
@@ -8,6 +8,7 @@ type Props = {
 	description: string;
 	projectLink: string;
 	githubLink: string;
+	techStack: Array<string>;
 };
 
 const Project = ({
@@ -16,12 +17,13 @@ const Project = ({
 	description,
 	projectLink,
 	githubLink,
+	techStack = [],
 }: Props) => {
 	return (
 		<Flex
 			className={style.projectCard}
 			bg="transparent"
-			p={50}
+			p={15}
 			w="full"
 			alignItems="center"
 			justifyContent="center">
@@ -80,8 +82,8 @@ const Project = ({
 				</Box>
 
 				<Box
-					py={12}
-					px={6}
+					py={5}
+					px={4}
 					maxW={{
 						base: "xl",
 						lg: "5xl",
@@ -158,6 +160,23 @@ const Project = ({
 							}}>
 							View Demo
 						</ChLink>
+					</Flex>
+					{/* Tech Stack */}
+					<Flex mt={4} flexWrap="wrap" justifyContent={"center"} gap="10px">
+						{techStack.length > 0 &&
+							techStack.map((stack, index) => (
+								<Text
+									border="1px solid white"
+									borderRadius="md"
+									style={{
+										transform: "skewX(-10deg)",
+									}}
+									p={2}
+									textTransform="capitalize"
+									key={index}>
+									{stack}
+								</Text>
+							))}
 					</Flex>
 				</Box>
 			</Box>

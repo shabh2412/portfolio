@@ -58,9 +58,13 @@ const Contact = (props: Props) => {
 						Development. If you have any project or opportunity, then please
 						connect with me via any of the platform below :)
 					</Text>
+					<Text color="whiteAlpha.700" fontSize="xl">
+						Call me on:{" "}
+						<span style={{ textDecoration: "underline" }}>+917738738680</span>
+					</Text>
 					<Wrap justify="center" my="10" spacing="10">
-						{contact.map((c) => (
-							<Box>
+						{contact.map((c, index) => (
+							<Box key={`${index}-${c.link}`}>
 								<WrapItem>
 									<Link href={c.link} isExternal bg="transparent">
 										<IconButton

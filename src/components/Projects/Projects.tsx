@@ -18,6 +18,7 @@ const Projects = (props: Props) => {
 					description={project.description}
 					projectLink={project.projectLink}
 					githubLink={project.githubLink}
+					techStack={project.techStack}
 				/>
 			))}
 		</CustomSection>

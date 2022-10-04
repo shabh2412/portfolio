@@ -9,6 +9,7 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { useScrollSection } from "react-scroll-section";
+import { GitHub } from "./components/GHStats";
 
 function App() {
 	const connectSection = useScrollSection("contact");
@@ -34,7 +35,9 @@ function App() {
 				/>
 				<About image={meWithMac} />
 				<Skill />
+				
 				<Projects />
+				<GitHub />
 				<Contact />
 				<Footer />
 			</Box>
