@@ -3,7 +3,7 @@ import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import myImage from "./assets/Cartoon.png";
 import About from "./components/About/About";
-import meWithMac from "./assets/Cartoon.png";
+import portfolioPicture from "./assets/IMG_6510.jpg";
 import Skill from "./components/Skills/Skill";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
@@ -25,17 +25,17 @@ function App() {
 					image={myImage}
 					description="I build interesting things that live on the Internet! 🚀 \n I love to transform ideas into reality using code and developing web-apps using the latest front-end technologies and full fleged APIs.\nCurrently I'm learning Typescript and Chakra UI."
 					hasCallToAction={true}
-					callToActionMessage="My Resume"
+					callToActionMessage="Download My Resume"
 					callToActionHandler={() => {
 						// alert("this action is under construction...");
 						window.open(
-							"https://drive.google.com/file/d/1bztSe7jZd390B9SV-mLpyeDpCjdd7UlZ/view?usp=sharing"
+							"https://drive.google.com/uc?export=download&id=1FEBJh_1TB4UOWtWxz-23-flRbt-gyunJ"
 						);
 					}}
 				/>
-				<About image={meWithMac} />
+				<About image={portfolioPicture} />
 				<Skill />
-				
+
 				<Projects />
 				<GitHub />
 				<Contact />

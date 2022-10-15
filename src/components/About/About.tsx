@@ -100,10 +100,9 @@ const About = ({ image }: Props) => {
 								_dark={{
 									color: "gray.400",
 								}}>
-								👨🏼‍💻 I love building things that live on the internet! My interest
-								in development started back when I was in my 12th Standard, when
-								I was trying to create my first app using Thunkable. I can say
-								that I've come way far in my journey of learning :)
+								👨🏼‍💻 A Dedicated Full-Stack web developer who is always passionate
+								about learning new things. Loves to solve problems and
+								constantly learn and acquire new skills.:)
 							</chakra.p>
 							<chakra.p
 								mt={4}
@@ -114,6 +113,15 @@ const About = ({ image }: Props) => {
 								}}>
 								Apart from coding, I love Teaching 🎓, playing Table Tennis 🏓,
 								dribbling with football ⚽️, reading books 📚 and stargazing✨🤩
+							</chakra.p>
+							<chakra.p
+								mt={4}
+								fontWeight="400"
+								color="rgb(137,147,177)"
+								_dark={{
+									color: "gray.400",
+								}}>
+								Feel free to checkout my github profile too! 👇
 							</chakra.p>
 							<Box mt={8}>
 								<Link

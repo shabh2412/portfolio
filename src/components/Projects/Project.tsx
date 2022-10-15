@@ -119,6 +119,26 @@ const Project = ({
 						{description}
 					</chakra.p>
 
+					{/* Tech Stack */}
+					<Flex mt={4} flexWrap="wrap" justifyContent={"center"} gap="10px">
+						{techStack.length > 0 &&
+							techStack.map((stack, index) => (
+								<Text
+									color="brand.700"
+									border="1px solid"
+									borderColor={"brand.700"}
+									borderRadius="md"
+									style={{
+										transform: "skewX(-10deg)",
+									}}
+									p={2}
+									textTransform="capitalize"
+									key={index}>
+									{stack}
+								</Text>
+							))}
+					</Flex>
+
 					<Flex mt={8} flexWrap="wrap" justifyContent="center">
 						{githubLink.length > 0 && (
 							<ChLink
@@ -160,25 +180,6 @@ const Project = ({
 							}}>
 							View Demo
 						</ChLink>
-					</Flex>
-					{/* Tech Stack */}
-					<Flex mt={4} flexWrap="wrap" justifyContent={"center"} gap="10px">
-						{techStack.length > 0 &&
-							techStack.map((stack, index) => (
-								<Text
-									color="brand.700"
-									border="1px solid"
-									borderColor={"brand.700"}
-									borderRadius="md"
-									style={{
-										transform: "skewX(-10deg)",
-									}}
-									p={2}
-									textTransform="capitalize"
-									key={index}>
-									{stack}
-								</Text>
-							))}
 					</Flex>
 				</Box>
 			</Box>

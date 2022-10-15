@@ -7,6 +7,7 @@ import {
 	SimpleGrid,
 	Wrap,
 	WrapItem,
+	Text,
 } from "@chakra-ui/layout";
 import React from "react";
 import { Section } from "react-scroll-section";
@@ -79,6 +80,15 @@ const Skill = (props: Props) => {
 							/>
 						</WrapItem>
 					))}
+					{/* <WrapItem
+						// border="1px solid red"
+						p="2"
+						width={["20%", "25%", "15%", "10%"]}>
+						<Text border="1px solid white">DSA</Text>
+						<Text border="1px solid white">Teamwork</Text>
+						<Text border="1px solid white">Collaboration</Text>
+						<Text border="1px solid white">Leadership</Text>
+					</WrapItem> */}
 					<HStack justifyContent="center" alignItems="center"></HStack>
 				</Wrap>
 			</Flex>

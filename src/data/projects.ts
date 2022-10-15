@@ -39,7 +39,7 @@ export const projects: project[] = [
 		title: "My Hours Clone [Group Project]",
 		description:
 			"An app that lets you track your team members, clients, projects, and time taken for each project.",
-		githubLink: "https://github.com/shabh2412/inconclusive-stop-6058",
+		githubLink: "https://github.com/shabh2412/myhours-clone",
 		projectLink: "https://my-hourss.netlify.app/",
 		techStack: [
 			"TypeScript",
@@ -58,7 +58,7 @@ export const projects: project[] = [
 		description:
 			"Simple Todo app that offers CRUD operations. Tech Stack used: Chakra UI, ReactJS, TypeScript, Redux, JSON Server.",
 		projectLink: "https://todo-tsx.vercel.app/",
-		githubLink: "",
+		githubLink: "https://github.com/shabh2412/Todo-app-using-TypeScript",
 		techStack: ["redux", "redux-thunk", "json-server", "react.js"],
 	},
 	{
@@ -94,7 +94,7 @@ export const projects: project[] = [
 		description:
 			"I built this app when I was learning about Prototype, Objects, and stacks in javascript.The user can create an array, push items, pop items, print the array, print in the reversed order, check size of array, show the top element of the array.",
 		projectLink: "https://stack-custom.netlify.app/",
-		githubLink: "",
+		githubLink: "https://github.com/shabh2412/custom-array-visualizer",
 		techStack: ["HTML", "CSS", "JS", "Bootstrap"],
 	},
 	{
