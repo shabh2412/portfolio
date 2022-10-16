@@ -30,7 +30,7 @@ const Hero = ({
 }: Props) => {
 	return (
 		<CustomSection id={elementId} waveOption={2} waveColor="#153e75">
-			<HStack height="65vh" py="10" justifyContent="center" alignItems="center">
+			<HStack height="100vh" py="10" justifyContent="center" alignItems="center">
 				<Box flexGrow="1" textAlign="center">
 					<Text
 						letterSpacing="wider"
@@ -48,7 +48,11 @@ const Hero = ({
 					<Box width={["100%", "100%", "100%", "50%"]} mx="auto" p="5">
 						<Description text={description} />
 					</Box>
-					<Flex justifyContent="center" alignItems="center" gap="2">
+					<Flex
+						justifyContent="center"
+						alignItems="center"
+						gap="2"
+						flexWrap="wrap">
 						<Box my="2">
 							{hasCallToAction && (
 								<Button
