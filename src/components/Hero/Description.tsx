@@ -10,7 +10,7 @@ const Description = ({ text }: Props) => {
 		<Box color="bluedark">
 			{text.split("\\n").map((str) => {
 				return (
-					<Text fontSize="lg" key={str.length.toString() + str}>
+					<Text fontSize={["sm", "lg"]} key={str.length.toString() + str}>
 						{str}
 					</Text>
 				);

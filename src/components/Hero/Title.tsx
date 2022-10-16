@@ -20,7 +20,7 @@ const Title = ({
 }: Props) => {
 	return (
 		<Text
-			fontSize={size}
+			fontSize={["3xl", size]}
 			fontWeight={fontWeight}
 			className={className}
 			color={color || "white"}
