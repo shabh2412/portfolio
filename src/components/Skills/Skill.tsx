@@ -99,7 +99,7 @@ const Skill = (props: Props) => {
 					<HStack justifyContent="center" alignItems="center"></HStack>
 				</Wrap>
 			</Flex>
-			<Title title="Soft Skills" size="5xl" textDecoration="none" />
+{/* 			<Title title="Soft Skills" size="5xl" textDecoration="none" />
 			<SimpleGrid columns={[2, 3, 4]} gap="3" my="4" alignItems="center">
 				<Text
 					fontSize="xl"
@@ -129,9 +129,7 @@ const Skill = (props: Props) => {
 					textDecorationColor="secondary">
 					Adaptable
 				</Text>
-				{/* <Box>Time Management</Box>
-				<Box>Critical Thinker</Box> */}
-			</SimpleGrid>
+			</SimpleGrid> */}
 		</CustomSection>
 	);
 };
