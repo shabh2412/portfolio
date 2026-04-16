@@ -154,19 +154,63 @@ const Hero = () => {
           </MotionBox>
 
           <MotionBox {...fadeUp(0.4)} pt={6}>
-            <HStack spacing={6} color="text.dim" fontSize="sm" flexWrap="wrap">
-              <Text className="rp-font-mono">{profile.location}</Text>
-              <Box w={1} h={1} rounded="full" bg="text.dim" />
-              <Link href={profile.socials.linkedin} isExternal _hover={{ color: "accent" }}>
+            <HStack
+              spacing={3}
+              color="text.dim"
+              fontSize="sm"
+              flexWrap="wrap"
+              rowGap={1}
+              justify={{ base: "center", md: "flex-start" }}
+            >
+              <Text className="rp-font-mono" py={2}>
+                {profile.location}
+              </Text>
+              <Box w={1} h={1} rounded="full" bg="text.dim" display={{ base: "none", md: "block" }} />
+              <Link
+                href={profile.socials.linkedin}
+                isExternal
+                _hover={{ color: "accent" }}
+                px={2}
+                py={2}
+                minH="40px"
+                display="inline-flex"
+                alignItems="center"
+              >
                 LinkedIn
               </Link>
-              <Link href={profile.socials.github} isExternal _hover={{ color: "accent" }}>
+              <Link
+                href={profile.socials.github}
+                isExternal
+                _hover={{ color: "accent" }}
+                px={2}
+                py={2}
+                minH="40px"
+                display="inline-flex"
+                alignItems="center"
+              >
                 GitHub
               </Link>
-              <Link href={profile.socials.twitter} isExternal _hover={{ color: "accent" }}>
+              <Link
+                href={profile.socials.twitter}
+                isExternal
+                _hover={{ color: "accent" }}
+                px={2}
+                py={2}
+                minH="40px"
+                display="inline-flex"
+                alignItems="center"
+              >
                 Twitter
               </Link>
-              <Link href={`mailto:${profile.email}`} _hover={{ color: "accent" }}>
+              <Link
+                href={`mailto:${profile.email}`}
+                _hover={{ color: "accent" }}
+                px={2}
+                py={2}
+                minH="40px"
+                display="inline-flex"
+                alignItems="center"
+              >
                 {profile.email}
               </Link>
             </HStack>

@@ -64,7 +64,7 @@ const Lab = () => {
                   </Text>
                   <ExternalLinkIcon color="text.dim" />
                 </HStack>
-                <Heading as="h4" fontSize="lg" color="text" mb={2} lineHeight="1.25">
+                <Heading as="h3" fontSize="lg" color="text" mb={2} lineHeight="1.25">
                   {p.title}
                 </Heading>
                 <Text color="text.muted" fontSize="sm" mb={4} noOfLines={2}>
