@@ -4,92 +4,104 @@ export type SkillGroup = {
   items: { name: string; icon: string }[];
 };
 
-const icon = (slug: string) =>
+const dev = (slug: string) =>
   `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${slug}/${slug}-original.svg`;
 
-const iconPlain = (slug: string) =>
+const devPlain = (slug: string) =>
   `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${slug}/${slug}-plain.svg`;
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Languages",
-    caption: "Typed-first. I reach for TypeScript by default.",
-    items: [
-      { name: "TypeScript", icon: icon("typescript") },
-      { name: "JavaScript", icon: icon("javascript") },
-      { name: "Python", icon: icon("python") },
-      { name: "HTML5", icon: icon("html5") },
-      { name: "CSS3", icon: icon("css3") },
-    ],
-  },
-  {
     title: "Frontend",
     caption: "The surface people touch — where I spend most of my time.",
     items: [
-      { name: "React", icon: icon("react") },
-      { name: "Next.js", icon: iconPlain("nextjs") },
-      { name: "Redux", icon: icon("redux") },
-      { name: "Chakra UI", icon: icon("react") },
-      { name: "Tailwind CSS", icon: iconPlain("tailwindcss") },
-      { name: "Material UI", icon: icon("materialui") },
-      { name: "Framer Motion", icon: icon("react") },
+      { name: "React", icon: dev("react") },
+      { name: "Next.js", icon: devPlain("nextjs") },
+      { name: "TypeScript", icon: dev("typescript") },
+      { name: "Redux", icon: dev("redux") },
+      { name: "Tailwind CSS", icon: devPlain("tailwindcss") },
+      { name: "shadcn/ui", icon: dev("react") },
+      { name: "Chakra UI", icon: dev("react") },
+      { name: "Material UI", icon: dev("materialui") },
+      { name: "Framer Motion", icon: dev("react") },
+      { name: "Config-Driven UI", icon: dev("javascript") },
     ],
   },
   {
     title: "Backend & Data",
     caption: "Enough depth to ship end-to-end when the moment calls for it.",
     items: [
-      { name: "Node.js", icon: icon("nodejs") },
-      { name: "Express", icon: icon("express") },
-      { name: "FastAPI", icon: icon("fastapi") },
-      { name: "MongoDB", icon: icon("mongodb") },
-      { name: "REST", icon: icon("nodejs") },
-      { name: "WebSockets", icon: icon("nodejs") },
+      { name: "Node.js", icon: dev("nodejs") },
+      { name: "Express", icon: dev("express") },
+      { name: "FastAPI", icon: dev("fastapi") },
+      { name: "MongoDB", icon: dev("mongodb") },
+      { name: "PostgreSQL", icon: dev("postgresql") },
+      { name: "pgvector", icon: dev("postgresql") },
+      { name: "Supabase", icon: dev("supabase") },
+      { name: "SQL", icon: dev("mysql") },
+      { name: "REST / WebSockets", icon: dev("nodejs") },
     ],
   },
   {
-    title: "Tooling & Platform",
+    title: "AI & LLM tooling",
+    caption: "AI-native workflows I use to ship faster and smarter.",
+    items: [
+      { name: "Vertex AI", icon: devPlain("googlecloud") },
+      { name: "LangChain", icon: dev("python") },
+      { name: "OpenAI Embeddings", icon: dev("python") },
+      { name: "Vercel AI SDK", icon: devPlain("nextjs") },
+      { name: "Claude", icon: dev("javascript") },
+      { name: "Gemini", icon: devPlain("googlecloud") },
+      { name: "Windsurf", icon: dev("javascript") },
+      { name: "pgvector", icon: dev("postgresql") },
+    ],
+  },
+  {
+    title: "Platform & Tooling",
     caption: "Fast feedback loops, tight DX, confident shipping.",
     items: [
-      { name: "Git", icon: icon("git") },
-      { name: "GitHub", icon: icon("github") },
-      { name: "Vite", icon: icon("react") },
-      { name: "Heroku", icon: icon("heroku") },
-      { name: "Vercel", icon: icon("nextjs") },
-      { name: "Markdown", icon: icon("markdown") },
+      { name: "AWS", icon: dev("amazonwebservices") },
+      { name: "Azure", icon: dev("azure") },
+      { name: "GCP", icon: devPlain("googlecloud") },
+      { name: "Vercel", icon: devPlain("nextjs") },
+      { name: "Git", icon: dev("git") },
+      { name: "GitHub", icon: dev("github") },
+      { name: "Vite", icon: dev("javascript") },
+      { name: "OAuth / Clerk / Auth0 / Okta", icon: dev("javascript") },
+      { name: "Metabase", icon: dev("javascript") },
     ],
   },
 ];
 
 export const principles = [
   {
-    title: "Design-led engineering",
-    body: "The best frontend engineers speak design. I ship UI that is pixel-accurate, motion-considered, and accessible by default.",
+    title: "Config-driven systems",
+    body: "Enterprise deployments shouldn't require engineers for every tweak. I design surfaces that are reconfigurable via JSON — scalable by construction, not bolted on later.",
     icon: "sparkles",
   },
   {
     title: "Performance as a feature",
-    body: "I measure before I optimize — Core Web Vitals, bundle budgets, and perceived responsiveness are treated as product requirements.",
+    body: "Memoization, virtualization, SSR, image pipelines, bundle budgets. Measured wins: 47% faster page loads on the Faradworks flagship, 2× faster iteration velocity on shared UI.",
     icon: "zap",
   },
   {
     title: "Types as documentation",
-    body: "Rigorous TypeScript, discriminated unions, and narrow prop contracts — because future-me and the team deserve readable code.",
+    body: "Rigorous TypeScript, discriminated unions, and narrow component contracts so future-me and the team can read the code instead of archaeology it.",
     icon: "braces",
   },
   {
+    title: "AI-augmented engineering",
+    body: "I use Windsurf, Claude, Gemini, and Vercel AI SDK to compress the loop from idea to production — without outsourcing the thinking or the taste.",
+    icon: "target",
+  },
+  {
     title: "Small, reversible steps",
-    body: "Trunk-based development with short-lived branches, small PRs, feature flags, and behind-the-scenes refactors that never break users.",
+    body: "Short-lived branches, small PRs, feature flags, and behind-the-scenes refactors. I ship in increments so users never feel the plumbing change.",
     icon: "git",
   },
   {
-    title: "Accessibility is table stakes",
-    body: "Keyboard paths, ARIA where it's needed (and not where it isn't), sufficient contrast, and reduced-motion respect.",
+    title: "Ownership, end to end",
+    body: "From RFC and architecture to rollback plan. I partner tightly with founders, design, backend, and data — and stay with a surface until it sticks.",
     icon: "access",
-  },
-  {
-    title: "Own the outcome",
-    body: "From RFC to rollback plan. I own product decisions on my surface area, partner tightly with design and backend, and ship until it sticks.",
-    icon: "target",
   },
 ];

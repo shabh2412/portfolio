@@ -3,10 +3,12 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Marquee from "./components/sections/Marquee";
 import About from "./components/sections/About";
+import CaseStudies from "./components/sections/CaseStudies";
 import Experience from "./components/sections/Experience";
-import Work from "./components/sections/Work";
 import Skills from "./components/sections/Skills";
 import Principles from "./components/sections/Principles";
+import Testimonials from "./components/sections/Testimonials";
+import Lab from "./components/sections/Lab";
 import GitHubActivity from "./components/sections/GitHubActivity";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
@@ -21,10 +23,12 @@ const App = () => {
         <Hero />
         <Marquee />
         <About />
-        <Work />
+        <CaseStudies />
         <Experience />
         <Skills />
         <Principles />
+        <Testimonials />
+        <Lab />
         <GitHubActivity />
         <Contact />
       </Box>

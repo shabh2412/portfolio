@@ -1,15 +1,15 @@
-import { Box, Grid, Heading, SimpleGrid, Text, VStack } from "@chakra-ui/react";
+import { Box, Grid, Heading, Link, SimpleGrid, Text, VStack } from "@chakra-ui/react";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
-import { profile, stats } from "../../data/profile";
+import { stats } from "../../data/profile";
 
 const About = () => {
   return (
     <Section
       id="about"
       eyebrow="about"
-      title="Frontend engineer with a product brain and a designer's eye."
-      description="Five years in, I care about the tiny details that add up to a product that feels fast, trustworthy, and obvious to use."
+      title="Full-stack engineer. Frontend-heavy. Founder-friendly."
+      description="Four years in, across AI, industrial, and enterprise domains — with a bias toward clean architecture, shipping fast, and keeping the product honest."
     >
       <Grid
         templateColumns={{ base: "1fr", lg: "1.2fr 1fr" }}
@@ -17,33 +17,61 @@ const About = () => {
         alignItems="start"
       >
         <Reveal>
-          <VStack spacing={5} align="stretch" color="text.muted" fontSize={{ base: "md", md: "lg" }} lineHeight="1.8">
+          <VStack
+            spacing={5}
+            align="stretch"
+            color="text.muted"
+            fontSize={{ base: "md", md: "lg" }}
+            lineHeight="1.8"
+          >
             <Text>
-              I started in 2019, fell for the web during a rigorous full-stack bootcamp at Masai
-              School, and haven't stopped since. Today I'm at{" "}
+              I'm a full-stack engineer with 4+ years shipping scalable, high-performance web apps
+              across AI, industrial, and enterprise domains. I focus on clean architecture,
+              performance-driven engineering, and shipping reliable products that solve real
+              problems.
+            </Text>
+            <Text>
+              Currently I'm a{" "}
+              <Box as="span" color="text" fontWeight={600}>
+                Frontend Engineer at{" "}
+                <Link href="https://www.linkedin.com/company/miraei-ai/" isExternal color="accent">
+                  Miraei AI
+                </Link>
+              </Box>
+              , leading the end-to-end frontend for our product. My work spans frontend, backend,
+              infra, CI/CD, and architectural decision-making — I collaborate directly with founders
+              to turn requirements into logic, architect systems, execute rapid MVPs, and build
+              scalable foundations.
+            </Text>
+            <Text>
+              Before this I was Founding Engineer at{" "}
+              <Box as="span" color="text" fontWeight={600}>
+                Faradworks
+              </Box>{" "}
+              building PinScope.AI, an SDE at{" "}
+              <Box as="span" color="text" fontWeight={600}>
+                SYMX.AI
+              </Box>
+              , and led major frontend initiatives at{" "}
               <Box as="span" color="text" fontWeight={600}>
                 Ripik.AI
               </Box>{" "}
-              — a deep-tech company putting computer vision and process optimisation on the factory
-              floor — where I lead the product's frontend architecture and ship the interface that
-              operators, plant managers, and data teams rely on every shift.
+              — including the in-house component library and the frontend for Ripik Optimus, one of
+              the company's flagship products.
             </Text>
             <Text>
-              My default stack is{" "}
+              My strengths: designing scalable, config-driven systems · performance optimisation
+              across frontend and backend · building intuitive UI frameworks and reusable
+              abstractions · strong AI-augmented development workflows. I use{" "}
               <Box as="span" color="text" fontWeight={600}>
-                React + TypeScript + Next.js
-              </Box>
-              , but I stay opinionated about fundamentals: clear component contracts, data-loading
-              boundaries, motion that respects the user, accessibility by default, and a relentless
-              focus on Core Web Vitals.
-            </Text>
-            <Text>
-              Outside of shipping, I mentor newer engineers, write small public repositories for the
-              patterns I learn from, and lift things up and put them down. I'm based in{" "}
-              <Box as="span" color="text" fontWeight={600}>
-                {profile.location}
+                Windsurf, Claude, Gemini, and Vercel AI SDK
               </Box>{" "}
-              and comfortable working remotely across time zones.
+              to accelerate shipping, and I've built production-grade agent experiences on Vertex
+              AI, LangChain, and pgvector-backed PostgreSQL.
+            </Text>
+            <Text>
+              If you're building something exciting in AI, developer tooling, or web platforms —
+              I'd love to connect.
             </Text>
           </VStack>
         </Reveal>

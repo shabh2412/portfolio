@@ -70,12 +70,12 @@ const Hero = () => {
               <Box as="span" color="text" fontWeight={600}>
                 Rishabh
               </Box>{" "}
-              — a senior frontend engineer who turns ambiguous product ideas into polished,
-              performant, accessible React and TypeScript apps. Currently helping{" "}
-              <Link href="https://ripik.ai" isExternal color="accent">
-                Ripik.AI
-              </Link>{" "}
-              ship enterprise AI for heavy industry.
+              — a full-stack engineer with 4+ years shipping scalable, high-performance web apps
+              across AI, industrial, and enterprise domains. Currently leading frontend at{" "}
+              <Link href="https://www.linkedin.com/company/miraei-ai/" isExternal color="accent">
+                Miraei AI
+              </Link>
+              . Previously Founding Engineer at Faradworks and frontend lead at Ripik.AI.
             </Text>
           </MotionBox>
 

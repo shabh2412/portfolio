@@ -1,12 +1,12 @@
 export const profile = {
   name: "Rishabh Panesar",
   handle: "shabh2412",
-  title: "Senior Frontend Engineer",
+  title: "Senior Full-Stack & Frontend Engineer",
   tagline: "I design and ship fast, delightful web products.",
   subtitle:
-    "Senior frontend engineer crafting production-grade React, TypeScript, and Next.js apps. Currently helping Ripik.AI ship enterprise AI products to heavy-industry leaders.",
-  location: "Navi Mumbai, India",
-  availability: "Open to senior frontend & product engineering roles",
+    "Full-stack engineer with 4+ years shipping scalable, high-performance web apps across AI, industrial, and enterprise domains. Currently leading frontend at Miraei AI.",
+  location: "India",
+  availability: "Open to senior frontend & full-stack engineering roles",
   email: "rishabhpanesar@gmail.com",
   phone: "+91 77387 38680",
   resumeUrl:
@@ -23,19 +23,24 @@ export const profile = {
   },
   keywords: [
     "React",
-    "TypeScript",
     "Next.js",
-    "Frontend Architecture",
+    "TypeScript",
+    "Config-Driven UI",
     "Design Systems",
+    "AI Product Engineering",
     "Web Performance",
-    "Accessibility",
     "Node.js",
   ],
+  currentCompany: {
+    name: "Miraei AI",
+    role: "Frontend Engineer",
+    url: "https://www.linkedin.com/company/miraei-ai/",
+  },
 } as const;
 
 export const stats = [
-  { value: "5+", label: "Years shipping production software" },
-  { value: "20+", label: "Products, features & internal tools shipped" },
-  { value: "96", label: "Public repositories on GitHub" },
-  { value: "99", label: "Lighthouse performance we target" },
+  { value: "4+", label: "Years shipping production software" },
+  { value: "5", label: "Enterprise & AI products shipped" },
+  { value: "83%", label: "Faster release cycles (Faradworks)" },
+  { value: "47%", label: "Page-load reduction on flagship UIs" },
 ];

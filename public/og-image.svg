@@ -32,36 +32,34 @@
   <rect width="1200" height="630" fill="url(#glow2)"/>
   <rect width="1200" height="630" fill="url(#glow3)"/>
 
-  <!-- Status pill -->
   <g transform="translate(80, 90)">
-    <rect width="360" height="40" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+    <rect width="320" height="40" rx="20" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
     <circle cx="22" cy="20" r="5" fill="#34d399"/>
     <text x="40" y="27" fill="#e7e9f2" font-family="JetBrains Mono, monospace" font-size="14">
-      Available for senior frontend roles
+      Open to senior frontend roles
     </text>
   </g>
 
-  <!-- Title -->
   <text x="80" y="240" font-family="Space Grotesk, Inter, sans-serif" font-size="82" font-weight="800" fill="#e7e9f2" letter-spacing="-3">
     Rishabh Panesar
   </text>
-  <text x="80" y="330" font-family="Space Grotesk, Inter, sans-serif" font-size="58" font-weight="700" fill="url(#g)" letter-spacing="-2">
-    Senior Frontend Engineer
+  <text x="80" y="330" font-family="Space Grotesk, Inter, sans-serif" font-size="54" font-weight="700" fill="url(#g)" letter-spacing="-2">
+    Frontend Engineer @ Miraei AI
   </text>
 
-  <!-- Subtitle -->
-  <text x="80" y="400" font-family="Inter, sans-serif" font-size="26" fill="#b8bcd0">
-    React · TypeScript · Next.js · Design Systems · Web Performance
+  <text x="80" y="400" font-family="Inter, sans-serif" font-size="24" fill="#b8bcd0">
+    Next.js · TypeScript · React · AI-native engineering
+  </text>
+  <text x="80" y="435" font-family="Inter, sans-serif" font-size="20" fill="#8b90a8">
+    4+ yrs · ex-Faradworks (Founding) · ex-Ripik.AI · ex-SYMX.AI
   </text>
 
-  <!-- Footer -->
   <g transform="translate(80, 525)">
     <text font-family="JetBrains Mono, monospace" font-size="18" fill="#8b90a8">
       rishabhpanesar.com   ·   linkedin.com/in/rishabh-panesar   ·   github.com/shabh2412
     </text>
   </g>
 
-  <!-- Brand mark -->
   <g transform="translate(1040, 80)">
     <rect width="80" height="80" rx="18" fill="url(#g)"/>
     <text x="40" y="54" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="38" font-weight="800" fill="#0a0b12" letter-spacing="-2">rp</text>
