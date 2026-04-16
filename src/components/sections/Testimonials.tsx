@@ -21,7 +21,7 @@ const Avatar = ({ name }: { name: string }) => {
       placeItems="center"
       background="var(--gradient)"
       color="#0a0b12"
-      fontWeight={800}
+      fontWeight={700}
       fontSize="md"
       className="rp-font-display"
       letterSpacing="-0.04em"

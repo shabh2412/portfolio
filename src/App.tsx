@@ -1,16 +1,18 @@
+import { lazy, Suspense } from "react";
 import { Box } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Marquee from "./components/sections/Marquee";
-import About from "./components/sections/About";
-import CaseStudies from "./components/sections/CaseStudies";
-import Experience from "./components/sections/Experience";
-import Skills from "./components/sections/Skills";
-import Testimonials from "./components/sections/Testimonials";
-import Lab from "./components/sections/Lab";
-import Contact from "./components/sections/Contact";
-import Footer from "./components/sections/Footer";
 import "./App.css";
+
+const About = lazy(() => import("./components/sections/About"));
+const CaseStudies = lazy(() => import("./components/sections/CaseStudies"));
+const Experience = lazy(() => import("./components/sections/Experience"));
+const Skills = lazy(() => import("./components/sections/Skills"));
+const Testimonials = lazy(() => import("./components/sections/Testimonials"));
+const Lab = lazy(() => import("./components/sections/Lab"));
+const Contact = lazy(() => import("./components/sections/Contact"));
+const Footer = lazy(() => import("./components/sections/Footer"));
 
 const App = () => {
   return (
@@ -20,15 +22,19 @@ const App = () => {
       <Box as="main" position="relative" zIndex={1}>
         <Hero />
         <Marquee />
-        <About />
-        <CaseStudies />
-        <Experience />
-        <Skills />
-        <Testimonials />
-        <Lab />
-        <Contact />
+        <Suspense fallback={null}>
+          <About />
+          <CaseStudies />
+          <Experience />
+          <Skills />
+          <Testimonials />
+          <Lab />
+          <Contact />
+        </Suspense>
       </Box>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </Box>
   );
 };

@@ -40,13 +40,26 @@
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Fonts -->
+    <!-- Fonts (non-blocking load) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      />
+    </noscript>
 
     <!-- Structured data -->
     <script type="application/ld+json">
@@ -84,7 +97,7 @@
         --border-strong: rgba(255, 255, 255, 0.14);
         --text: #e7e9f2;
         --text-muted: #8b90a8;
-        --text-dim: #5a5f74;
+        --text-dim: #7a8099;
         --accent: #5eead4;
         --gradient: linear-gradient(135deg, #5eead4 0%, #8b5cf6 50%, #f472b6 100%);
       }
