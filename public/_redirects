@@ -1,0 +1,3 @@
+# Clean URL: /resume serves /resume/index.html
+# (Netlify does this automatically for folder routes; forcing it here to be explicit.)
+/resume  /resume/index.html  200

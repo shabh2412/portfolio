@@ -1,101 +1,180 @@
-import { Button } from "@chakra-ui/button";
-import { Box, HStack, Text, Flex } from "@chakra-ui/layout";
-import { Section } from "react-scroll-section";
-import CustomSection from "../SectionComponent/CustomSection";
-import Description from "./Description";
-import style from "./Hero.module.css";
-import Title from "./Title";
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  HStack,
+  Link,
+  Text,
+  VStack,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { profile } from "../../data/profile";
+import Pill from "../ui/Pill";
 
-type Props = {
-	elementId: string;
-	intro: string;
-	primaryTitle: string;
-	secondaryTitle?: string;
-	image?: string;
-	description: string;
-	hasCallToAction?: boolean;
-	callToActionMessage?: string;
-	callToActionHandler?: Function;
-};
+const MotionBox = motion(Box);
+const MotionHeading = motion(Heading);
 
-const Hero = ({
-	elementId,
-	primaryTitle,
-	secondaryTitle,
-	intro,
-	description,
-	hasCallToAction = false,
-	callToActionMessage = "",
-	callToActionHandler = () => {},
-}: Props) => {
-	return (
-		<CustomSection id={elementId} waveOption={2} waveColor="#153e75">
-			<HStack height="100vh" py="10" justifyContent="center" alignItems="center">
-				<Box flexGrow="1" textAlign="center">
-					<Text
-						letterSpacing="wider"
-						textTransform="uppercase"
-						color="text.lightGray"
-						fontWeight="semibold">
-						{intro}
-					</Text>
-					{primaryTitle && (
-						<Title title={primaryTitle} className={style.titleColor} />
-					)}
-					{secondaryTitle && (
-						<Title title={secondaryTitle} className={style.titleColor} />
-					)}
-					<Box width={["100%", "100%", "100%", "50%"]} mx="auto" p="5">
-						<Description text={description} />
-					</Box>
-					<Flex
-						justifyContent="center"
-						alignItems="center"
-						gap="2"
-						flexWrap="wrap">
-						<Box my="2">
-							{hasCallToAction && (
-								<Button
-									colorScheme="linkedin"
-									variant="solid"
-									onClick={() => {
-										window.open(
-											"https://drive.google.com/file/d/1FEBJh_1TB4UOWtWxz-23-flRbt-gyunJ/view?usp=sharing"
-										);
-									}}>
-									View my resume online
-								</Button>
-							)}
-						</Box>
-						<Box my="2">
-							{hasCallToAction && (
-								<Button
-									colorScheme="blue"
-									variant="solid"
-									onClick={() => {
-										callToActionHandler();
-									}}>
-									{callToActionMessage}
-								</Button>
-							)}
-						</Box>
-						<Box my="2">
-							{hasCallToAction && (
-								<Button
-									colorScheme="linkedin"
-									variant="solid"
-									onClick={() => {
-										window.open("https://www.linkedin.com/in/rishabh-panesar/");
-									}}>
-									Connect on Linked<strong>in</strong>
-								</Button>
-							)}
-						</Box>
-					</Flex>
-				</Box>
-			</HStack>
-		</CustomSection>
-	);
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, delay, ease: [0.22, 1, 0.36, 1] as const },
+});
+
+const command = `$ hire --role "Senior Frontend Engineer" --name "Rishabh Panesar"`;
+
+const Hero = () => {
+  return (
+    <Box as="section" id="top" position="relative" overflow="hidden">
+      <Box className="rp-aurora" />
+      <Box className="rp-grid" />
+
+      <Container
+        maxW="7xl"
+        px={{ base: 5, md: 8 }}
+        pt={{ base: 32, md: 44 }}
+        pb={{ base: 20, md: 32 }}
+        position="relative"
+        zIndex={1}
+      >
+        <VStack
+          align={{ base: "center", md: "flex-start" }}
+          spacing={8}
+          textAlign={{ base: "center", md: "left" }}
+        >
+          <MotionBox {...fadeUp(0)}>
+            <Pill label="Shipping at Miraei AI" pulse dotColor="#34d399" />
+          </MotionBox>
+
+          <MotionHeading
+            as="h1"
+            fontSize={{ base: "5xl", md: "7xl", lg: "8xl" }}
+            lineHeight="0.95"
+            letterSpacing="-0.035em"
+            {...fadeUp(0.08)}
+          >
+            <Box as="span" color="text">
+              I build the web
+            </Box>
+            <br />
+            <Box as="span" className="rp-gradient-text">
+              people actually enjoy.
+            </Box>
+          </MotionHeading>
+
+          <MotionBox {...fadeUp(0.16)} maxW="2xl">
+            <Text fontSize={{ base: "lg", md: "xl" }} color="text.muted">
+              I'm{" "}
+              <Box as="span" color="text" fontWeight={600}>
+                Rishabh
+              </Box>
+              . I ship AI-native products end-to-end. Four years across AI, industrial, and
+              enterprise domains, paired with a relentless focus on performance. Currently at{" "}
+              <Link href="https://www.linkedin.com/company/miraei-ai/" isExternal color="accent">
+                Miraei AI
+              </Link>
+              , owning the build from UI to infra.
+            </Text>
+          </MotionBox>
+
+          <MotionBox {...fadeUp(0.24)} w="full" maxW="3xl">
+            <Box
+              className="rp-card rp-font-mono"
+              px={5}
+              py={4}
+              fontSize={{ base: "xs", md: "sm" }}
+              textAlign="left"
+            >
+              <HStack spacing={2} mb={3} opacity={0.6}>
+                <Box w={3} h={3} rounded="full" bg="#ff5f57" />
+                <Box w={3} h={3} rounded="full" bg="#febc2e" />
+                <Box w={3} h={3} rounded="full" bg="#28c840" />
+                <Text ml={2} color="text.muted">
+                  rishabh@portfolio ~
+                </Text>
+              </HStack>
+              <Text color="text.muted" overflow="auto" whiteSpace="nowrap">
+                <Box as="span" color="accent">
+                  →
+                </Box>{" "}
+                {command}
+                <Box as="span" className="rp-blink" ml={1}>
+                  ▌
+                </Box>
+              </Text>
+            </Box>
+          </MotionBox>
+
+          <MotionBox {...fadeUp(0.32)}>
+            <Wrap spacing={3} justify={{ base: "center", md: "flex-start" }}>
+              <WrapItem>
+                <Button
+                  as="a"
+                  href="#work"
+                  size="lg"
+                  color="#0a0b12"
+                  background="var(--gradient)"
+                  _hover={{ transform: "translateY(-2px)", opacity: 0.95 }}
+                  transition="all 0.25s"
+                  fontWeight={700}
+                >
+                  See my work →
+                </Button>
+              </WrapItem>
+              <WrapItem>
+                <Button
+                  as="a"
+                  href={profile.resumeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  size="lg"
+                  variant="outline"
+                  borderColor="border.strong"
+                  color="text"
+                  _hover={{ borderColor: "accent", color: "accent", bg: "transparent" }}
+                >
+                  View résumé
+                </Button>
+              </WrapItem>
+              <WrapItem>
+                <Button
+                  as="a"
+                  href="#contact"
+                  size="lg"
+                  variant="ghost"
+                  color="text.muted"
+                  _hover={{ color: "text", bg: "whiteAlpha.50" }}
+                >
+                  Get in touch ↗
+                </Button>
+              </WrapItem>
+            </Wrap>
+          </MotionBox>
+
+          <MotionBox {...fadeUp(0.4)} pt={6}>
+            <HStack spacing={6} color="text.dim" fontSize="sm" flexWrap="wrap">
+              <Text className="rp-font-mono">{profile.location}</Text>
+              <Box w={1} h={1} rounded="full" bg="text.dim" />
+              <Link href={profile.socials.linkedin} isExternal _hover={{ color: "accent" }}>
+                LinkedIn
+              </Link>
+              <Link href={profile.socials.github} isExternal _hover={{ color: "accent" }}>
+                GitHub
+              </Link>
+              <Link href={profile.socials.twitter} isExternal _hover={{ color: "accent" }}>
+                Twitter
+              </Link>
+              <Link href={`mailto:${profile.email}`} _hover={{ color: "accent" }}>
+                {profile.email}
+              </Link>
+            </HStack>
+          </MotionBox>
+        </VStack>
+      </Container>
+    </Box>
+  );
 };
 
 export default Hero;

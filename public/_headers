@@ -1,0 +1,12 @@
+/resume.pdf
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Disposition: inline; filename="Rishabh-Panesar-Resume.pdf"
+
+/resume
+  Cache-Control: public, max-age=0, must-revalidate
+
+/resume/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/resume/index.html
+  Cache-Control: public, max-age=0, must-revalidate

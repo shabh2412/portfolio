@@ -1,17 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Rishabh Panesar's Portfolio Website</title>
-		<link
-			rel="stylesheet"
-			href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-		/>
-	</head>
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/main.tsx"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary meta -->
+    <title>Rishabh Panesar · Frontend Engineer @ Miraei AI | Next.js, TypeScript, AI</title>
+    <meta
+      name="description"
+      content="Rishabh Panesar is a full-stack engineer with 4+ years shipping scalable, high-performance web apps across AI, industrial, and enterprise domains. Frontend Engineer at Miraei AI; ex Founding Engineer at Faradworks, frontend lead at Ripik.AI."
+    />
+    <meta
+      name="keywords"
+      content="Rishabh Panesar, Rishabh Panesar portfolio, Rishabh Panesar LinkedIn, senior frontend engineer, React developer India, Next.js engineer, TypeScript developer, founding engineer, Miraei AI frontend engineer, Faradworks founding engineer, Ripik.AI frontend, PinScope AI, config driven UI, Vertex AI LangChain, AI-native engineer, full stack engineer India, founding frontend engineer, shadcn/ui engineer, hire frontend engineer"
+    />
+    <meta name="author" content="Rishabh Panesar" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
+    <link rel="canonical" href="https://rishabhpanesar.com/" />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#0a0b12" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#0a0b12" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rishabh Panesar" />
+    <meta property="og:url" content="https://rishabhpanesar.com/" />
+    <meta
+      property="og:title"
+      content="Rishabh Panesar · Frontend Engineer @ Miraei AI | Next.js, TypeScript, AI"
+    />
+    <meta
+      property="og:description"
+      content="Full-stack engineer with 4+ years across AI, industrial, and enterprise domains. Frontend Engineer at Miraei AI; ex Founding Engineer at Faradworks and frontend lead at Ripik.AI."
+    />
+    <meta property="og:image" content="https://rishabhpanesar.com/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Rishabh Panesar · Frontend Engineer @ Miraei AI" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PanesarRishabh" />
+    <meta name="twitter:creator" content="@PanesarRishabh" />
+    <meta
+      name="twitter:title"
+      content="Rishabh Panesar · Frontend Engineer @ Miraei AI"
+    />
+    <meta
+      name="twitter:description"
+      content="Full-stack engineer shipping Next.js / TypeScript / AI products. Currently at Miraei AI."
+    />
+    <meta name="twitter:image" content="https://rishabhpanesar.com/og-image.svg" />
+
+    <!-- Icons + manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rishabh Panesar",
+        "alternateName": ["Rishabh", "shabh2412"],
+        "url": "https://rishabhpanesar.com/",
+        "image": "https://rishabhpanesar.com/og-image.svg",
+        "jobTitle": "Frontend Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Miraei AI"
+        },
+        "alumniOf": [
+          { "@type": "Organization", "name": "Faradworks" },
+          { "@type": "Organization", "name": "SYMX.AI" },
+          { "@type": "Organization", "name": "Ripik.AI" },
+          { "@type": "CollegeOrUniversity", "name": "Amity University Mumbai" },
+          { "@type": "EducationalOrganization", "name": "Masai School" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "email": "mailto:rishabhpanesar@gmail.com",
+        "telephone": "+91-77387-38680",
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "Redux",
+          "shadcn/ui",
+          "Tailwind CSS",
+          "Config-Driven UI",
+          "Frontend Architecture",
+          "Design Systems",
+          "Web Performance",
+          "AI Product Engineering",
+          "Vertex AI",
+          "LangChain",
+          "pgvector",
+          "PostgreSQL",
+          "MongoDB",
+          "AWS",
+          "Full-Stack Development"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/rishabh-panesar/",
+          "https://github.com/shabh2412",
+          "https://twitter.com/PanesarRishabh",
+          "https://www.instagram.com/rishabhpanesar/"
+        ]
+      }
+    </script>
+
+    <!-- Structured data: WebSite -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Rishabh Panesar · Portfolio",
+        "url": "https://rishabhpanesar.com/",
+        "author": {
+          "@type": "Person",
+          "name": "Rishabh Panesar"
+        }
+      }
+    </script>
+
+    <!-- Structured data: ProfessionalService (rich hiring queries) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Rishabh Panesar · Frontend Engineering",
+        "image": "https://rishabhpanesar.com/og-image.svg",
+        "url": "https://rishabhpanesar.com/",
+        "telephone": "+91-77387-38680",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "areaServed": "Worldwide",
+        "serviceType": [
+          "Frontend Engineering",
+          "Full-Stack Engineering",
+          "Next.js Development",
+          "React Development",
+          "TypeScript Engineering",
+          "AI Product Engineering",
+          "Design Systems",
+          "Web Performance"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="padding:24px;font-family:Inter,system-ui,sans-serif;color:#e7e9f2;background:#0a0b12">
+        <h1>Rishabh Panesar · Frontend Engineer @ Miraei AI</h1>
+        <p>
+          Full-stack engineer with 4+ years shipping scalable, high-performance web apps across
+          AI, industrial, and enterprise domains. Frontend Engineer at Miraei AI. Previously
+          Founding Engineer at Faradworks (PinScope.AI), SDE at SYMX.AI, and Frontend Engineer
+          at Ripik.AI (Ripik Optimus). Stack: Next.js, TypeScript, React, Node.js, Tailwind CSS,
+          shadcn/ui, Vertex AI, LangChain, AWS.
+          Reach me at <a href="mailto:rishabhpanesar@gmail.com">rishabhpanesar@gmail.com</a>,
+          on <a href="https://www.linkedin.com/in/rishabh-panesar/">LinkedIn</a>,
+          or <a href="https://github.com/shabh2412">GitHub</a>.
+        </p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

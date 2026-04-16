@@ -1,48 +1,36 @@
-import { Box } from "@chakra-ui/layout";
-import Hero from "./components/Hero/Hero";
+import { Box } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar";
-import myImage from "./assets/Cartoon.png";
-import About from "./components/About/About";
-import portfolioPicture from "./assets/IMG_6510.jpg";
-import Skill from "./components/Skills/Skill";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import { useScrollSection } from "react-scroll-section";
-import { GitHub } from "./components/GHStats";
+import Hero from "./components/Hero/Hero";
+import Marquee from "./components/sections/Marquee";
+import About from "./components/sections/About";
+import CaseStudies from "./components/sections/CaseStudies";
+import Experience from "./components/sections/Experience";
+import Skills from "./components/sections/Skills";
+import Testimonials from "./components/sections/Testimonials";
+import Lab from "./components/sections/Lab";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/Footer";
+import "./App.css";
 
-function App() {
-	const connectSection = useScrollSection("contact");
-	return (
-		<div className="App">
-			<Navbar />
-			<Box bg="primary" color="white">
-				<Hero
-					elementId="top"
-					intro="Hi, My Name is"
-					primaryTitle="Rishabh Panesar"
-					secondaryTitle="I am a full-stack dev"
-					image={myImage}
-					description="I build interesting things that live on the Internet! 🚀 \n I love to transform ideas into reality using code and developing web-apps using the latest front-end technologies and full fleged APIs.\nCurrently I'm learning Typescript and Chakra UI."
-					hasCallToAction={true}
-					callToActionMessage="Download My Resume"
-					callToActionHandler={() => {
-						// alert("this action is under construction...");
-						window.open(
-							"https://drive.google.com/uc?export=download&id=1FEBJh_1TB4UOWtWxz-23-flRbt-gyunJ"
-						);
-					}}
-				/>
-				<About image={portfolioPicture} />
-				<Skill />
-
-				<Projects />
-				<GitHub />
-				<Contact />
-				<Footer />
-			</Box>
-		</div>
-	);
-}
+const App = () => {
+  return (
+    <Box className="rp-app">
+      <Box className="rp-noise" aria-hidden />
+      <Navbar />
+      <Box as="main" position="relative" zIndex={1}>
+        <Hero />
+        <Marquee />
+        <About />
+        <CaseStudies />
+        <Experience />
+        <Skills />
+        <Testimonials />
+        <Lab />
+        <Contact />
+      </Box>
+      <Footer />
+    </Box>
+  );
+};
 
 export default App;
