@@ -1,0 +1,46 @@
+import { Box, Container, Flex, HStack, Link, Text } from "@chakra-ui/react";
+import { profile } from "../../data/profile";
+
+const Footer = () => {
+  const year = new Date().getFullYear();
+  return (
+    <Box as="footer" borderTop="1px solid" borderColor="border" bg="bg.elev">
+      <Container maxW="7xl" px={{ base: 5, md: 8 }} py={10}>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          justify="space-between"
+          align={{ base: "flex-start", md: "center" }}
+          gap={4}
+        >
+          <Box>
+            <Text className="rp-font-display" fontWeight={700} color="text">
+              Rishabh Panesar
+            </Text>
+            <Text fontSize="sm" color="text.muted" mt={1}>
+              Senior Frontend Engineer · {profile.location}
+            </Text>
+          </Box>
+          <HStack spacing={5} fontSize="sm" flexWrap="wrap">
+            <Link href={profile.socials.linkedin} isExternal color="text.muted" _hover={{ color: "accent" }}>
+              LinkedIn
+            </Link>
+            <Link href={profile.socials.github} isExternal color="text.muted" _hover={{ color: "accent" }}>
+              GitHub
+            </Link>
+            <Link href={profile.socials.twitter} isExternal color="text.muted" _hover={{ color: "accent" }}>
+              Twitter
+            </Link>
+            <Link href={`mailto:${profile.email}`} color="text.muted" _hover={{ color: "accent" }}>
+              Email
+            </Link>
+          </HStack>
+          <Text fontSize="xs" color="text.dim" className="rp-font-mono">
+            © {year} · Built with React, TS & care.
+          </Text>
+        </Flex>
+      </Container>
+    </Box>
+  );
+};
+
+export default Footer;

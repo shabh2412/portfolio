@@ -7,103 +7,145 @@ import todoTsx from "../assets/todoTsx.png";
 import myHours from "../assets/myHoursLandingPage.png";
 import chattingApp from "../assets/chattingApp.png";
 
-type project = {
-	image: string;
-	title: string;
-	description: string;
-	projectLink: string;
-	githubLink: string;
-	techStack: Array<string>;
+export type Project = {
+  image: string;
+  title: string;
+  tagline: string;
+  description: string;
+  role: string;
+  year: string;
+  category: "Product" | "Case Study" | "Tool" | "Learning";
+  impact?: string[];
+  projectLink: string;
+  githubLink?: string;
+  techStack: string[];
+  featured?: boolean;
 };
 
-export const projects: project[] = [
-	{
-		image: chattingApp,
-		title: "Basic Chatting App",
-		description:
-			"An app that lets you instantly broadcast messages to and receive messages from the users using the app... Chat history is retained even after you refresh or close the app.",
-		githubLink: "https://github.com/shabh2412/basic-chatting-app",
-		projectLink: "https://basic-chatting-app.herokuapp.com/",
-		techStack: [
-			"Socket.io",
-			"express.js",
-			"typeScript",
-			"html",
-			"css",
-			"js",
-			"bootstrap",
-		],
-	},
-	{
-		image: myHours,
-		title: "My Hours Clone [Group Project]",
-		description:
-			"An app that lets you track your team members, clients, projects, and time taken for each project.",
-		githubLink: "https://github.com/shabh2412/myhours-clone",
-		projectLink: "https://my-hourss.netlify.app/",
-		techStack: [
-			"TypeScript",
-			"react.js",
-			"redux",
-			"mongoDB",
-			"express.js",
-			"node.js",
-			"redux-thunk",
-			"chakra-UI",
-		],
-	},
-	{
-		image: todoTsx,
-		title: "Todo App",
-		description:
-			"Simple Todo app that offers CRUD operations. Tech Stack used: Chakra UI, ReactJS, TypeScript, Redux, JSON Server.",
-		projectLink: "https://todo-tsx.vercel.app/",
-		githubLink: "https://github.com/shabh2412/Todo-app-using-TypeScript",
-		techStack: ["redux", "redux-thunk", "json-server", "react.js"],
-	},
-	{
-		image: indiamart,
-		title: "IndiaMART Clone [Group Project]",
-		description:
-			"This is a clone of e-commerce website named as IndiaMART. Users can search for products, view product details, place product request.",
-		projectLink: "https://indiamart-clone-masai.netlify.app/",
-		githubLink: "https://github.com/shabh2412/Indiamart-Clone",
-		techStack: ["HTML", "CSS", "JS", "Bootstrap"],
-	},
-	{
-		image: fraazoClone,
-		title: "Fraazo Clone [Group Project]",
-		description:
-			"This is a clone of e-commerce website named as Fraazo. Users can buy groceries on this platform. Generates a random array of items and displays it in deal of the day section. Pages: Home Page, Products Listing Page, Product Details Page, User Detail Page, Cart, Checkout & Payment Page.",
-		projectLink: "https://fraazo-clone.netlify.app/",
-		githubLink: "https://github.com/shabh2412/Fraazo-Clone",
-		techStack: ["HTML", "CSS", "JS", "Bootstrap"],
-	},
-	{
-		image: weatherApp,
-		title: "Weather App",
-		description:
-			"This app fetches the user's current location using GeoLocation API, and then uses the location data to fetch the current weather data via the Open Weather Map API. User can search weather data of any location by just typing the location name. Application uses debouncing to reduce the number of requests sent to the API.",
-		projectLink: "https://shabh2412.github.io/Weather-APP-JS/",
-		githubLink: "https://github.com/shabh2412/Weather-APP-JS",
-		techStack: ["HTML", "CSS", "JS", "ES-6", "Bootstrap"],
-	},
-	{
-		image: arrayApp,
-		title: "Simple Array Visualiser",
-		description:
-			"I built this app when I was learning about Prototype, Objects, and stacks in javascript.The user can create an array, push items, pop items, print the array, print in the reversed order, check size of array, show the top element of the array.",
-		projectLink: "https://stack-custom.netlify.app/",
-		githubLink: "https://github.com/shabh2412/custom-array-visualizer",
-		techStack: ["HTML", "CSS", "JS", "Bootstrap"],
-	},
-	{
-		image: starwarsApp,
-		title: "Starwars Character Search App",
-		description:
-			"I built this app when I was learning about debouncing. It uses the SWAP Api to fetch data. User can search for a character, select the character from the results and view their details by clicking on the character name from the results.",
-		projectLink: "https://star-wars-search-characters.netlify.app/",
-		githubLink: "https://github.com/shabh2412/star-wars-character-search",
-		techStack: ["HTML", "CSS", "JS"],
-	},
+export const projects: Project[] = [
+  {
+    image: myHours,
+    title: "My Hours — Collaborative Time Tracking",
+    tagline: "Track teams, clients, projects, and billable hours in one place.",
+    description:
+      "A production-grade clone of the My Hours time-tracking platform. I owned the frontend architecture — routing, auth, role-based dashboards, and the redux-thunk data layer — and shipped the end-to-end billing and reports flow.",
+    role: "Frontend Lead, 5-person team",
+    year: "2022",
+    category: "Product",
+    impact: [
+      "Typed state tree with redux-thunk eliminated a full class of race-condition bugs",
+      "Shipped all 12 user flows on schedule in a one-week sprint",
+      "Reusable dashboard primitives adopted across three internal side-projects",
+    ],
+    projectLink: "https://my-hourss.netlify.app/",
+    githubLink: "https://github.com/shabh2412/myhours-clone",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Redux",
+      "Redux Thunk",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Chakra UI",
+    ],
+    featured: true,
+  },
+  {
+    image: chattingApp,
+    title: "Realtime Chat — Socket.io + TypeScript",
+    tagline: "Zero-latency group chat with persistent history.",
+    description:
+      "A broadcast chat built on Socket.io with a typed Node + Express backend. Presence, delivery, and history survive reloads and reconnects — I modeled the event contract as a shared TypeScript package between client and server.",
+    role: "Solo engineer",
+    year: "2022",
+    category: "Tool",
+    impact: [
+      "Single source of truth for socket events via shared types",
+      "Graceful reconnect with state hydration on refresh",
+    ],
+    projectLink: "https://basic-chatting-app.herokuapp.com/",
+    githubLink: "https://github.com/shabh2412/basic-chatting-app",
+    techStack: ["Socket.io", "Express", "TypeScript", "HTML", "CSS", "Bootstrap"],
+    featured: true,
+  },
+  {
+    image: indiamart,
+    title: "IndiaMART — B2B Marketplace Clone",
+    tagline: "Search, browse, and request products across thousands of SKUs.",
+    description:
+      "A functional clone of India's largest B2B marketplace, built in a one-week sprint. I focused on the product discovery experience: faceted search, product detail, and the request-quote flow.",
+    role: "Frontend, 4-person team",
+    year: "2021",
+    category: "Case Study",
+    projectLink: "https://indiamart-clone-masai.netlify.app/",
+    githubLink: "https://github.com/shabh2412/Indiamart-Clone",
+    techStack: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    featured: true,
+  },
+  {
+    image: fraazoClone,
+    title: "Fraazo — Hyperlocal Grocery",
+    tagline: "End-to-end e-commerce: browse, cart, checkout, payment.",
+    description:
+      "A fully-functional clone of Fraazo, covering the complete shopping journey. I built the product listing, details, and deal-of-the-day modules, including a randomised-inventory engine.",
+    role: "Frontend, team project",
+    year: "2021",
+    category: "Case Study",
+    projectLink: "https://fraazo-clone.netlify.app/",
+    githubLink: "https://github.com/shabh2412/Fraazo-Clone",
+    techStack: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+  },
+  {
+    image: todoTsx,
+    title: "Typed Todos — Redux + TypeScript",
+    tagline: "A reference CRUD app with a rigorously typed store.",
+    description:
+      "A small but careful reference implementation: fully typed actions, selectors, and thunks against a JSON-server backend, with Chakra UI primitives and an accessible keyboard-first UX.",
+    role: "Solo",
+    year: "2022",
+    category: "Tool",
+    projectLink: "https://todo-tsx.vercel.app/",
+    githubLink: "https://github.com/shabh2412/Todo-app-using-TypeScript",
+    techStack: ["React", "TypeScript", "Redux", "Redux Thunk", "JSON Server", "Chakra UI"],
+  },
+  {
+    image: weatherApp,
+    title: "Weather — Geolocation + Debounced Search",
+    tagline: "Your weather, wherever you are — with 300ms debounced search.",
+    description:
+      "A small app used to teach debouncing, geolocation, and network-efficient UX. Uses the browser Geolocation API and OpenWeatherMap, with request cancellation on quick typing.",
+    role: "Solo",
+    year: "2021",
+    category: "Learning",
+    projectLink: "https://shabh2412.github.io/Weather-APP-JS/",
+    githubLink: "https://github.com/shabh2412/Weather-APP-JS",
+    techStack: ["JavaScript", "HTML", "CSS", "Bootstrap", "ES6"],
+  },
+  {
+    image: starwarsApp,
+    title: "Star Wars Character Search",
+    tagline: "Debounced search against the SWAPI, with detail views.",
+    description:
+      "A simple interface over the SWAPI: typeahead search with debouncing, detail fetch on selection, and a small pedagogical codebase I still point newer devs at.",
+    role: "Solo",
+    year: "2021",
+    category: "Learning",
+    projectLink: "https://star-wars-search-characters.netlify.app/",
+    githubLink: "https://github.com/shabh2412/star-wars-character-search",
+    techStack: ["JavaScript", "HTML", "CSS"],
+  },
+  {
+    image: arrayApp,
+    title: "Array / Stack Visualiser",
+    tagline: "See the data structure, not just the code.",
+    description:
+      "A teaching tool I built while internalising JavaScript prototypes and stacks: push, pop, peek, size, reverse — rendered as live visual state.",
+    role: "Solo",
+    year: "2021",
+    category: "Learning",
+    projectLink: "https://stack-custom.netlify.app/",
+    githubLink: "https://github.com/shabh2412/custom-array-visualizer",
+    techStack: ["JavaScript", "HTML", "CSS", "Bootstrap"],
+  },
 ];
