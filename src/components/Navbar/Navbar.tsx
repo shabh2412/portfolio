@@ -53,27 +53,17 @@ const Navbar = () => {
         <HStack h={16} justify="space-between">
           <Link
             href="#top"
-            _hover={{ textDecoration: "none" }}
-            display="flex"
+            _hover={{ textDecoration: "none", color: "accent" }}
+            display="inline-flex"
             alignItems="center"
-            gap={2}
           >
             <Box
-              w={9}
-              h={9}
-              rounded="lg"
-              display="grid"
-              placeItems="center"
-              background="var(--gradient)"
-              fontWeight={800}
-              color="#0a0b12"
-              fontSize="sm"
               className="rp-font-display"
-              letterSpacing="-0.04em"
+              fontWeight={700}
+              color="text"
+              letterSpacing="-0.02em"
+              fontSize="md"
             >
-              rp
-            </Box>
-            <Box className="rp-font-display" fontWeight={700} color="text">
               Rishabh Panesar
             </Box>
           </Link>
