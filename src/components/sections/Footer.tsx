@@ -20,17 +20,56 @@ const Footer = () => {
               {profile.location}
             </Text>
           </Box>
-          <HStack spacing={5} fontSize="sm" flexWrap="wrap">
-            <Link href={profile.socials.linkedin} isExternal color="text.muted" _hover={{ color: "accent" }}>
+          <HStack spacing={2} fontSize="sm" flexWrap="wrap" rowGap={1}>
+            <Link
+              href={profile.socials.linkedin}
+              isExternal
+              color="text.muted"
+              _hover={{ color: "accent" }}
+              px={2}
+              py={2}
+              minH="40px"
+              display="inline-flex"
+              alignItems="center"
+            >
               LinkedIn
             </Link>
-            <Link href={profile.socials.github} isExternal color="text.muted" _hover={{ color: "accent" }}>
+            <Link
+              href={profile.socials.github}
+              isExternal
+              color="text.muted"
+              _hover={{ color: "accent" }}
+              px={2}
+              py={2}
+              minH="40px"
+              display="inline-flex"
+              alignItems="center"
+            >
               GitHub
             </Link>
-            <Link href={profile.socials.twitter} isExternal color="text.muted" _hover={{ color: "accent" }}>
+            <Link
+              href={profile.socials.twitter}
+              isExternal
+              color="text.muted"
+              _hover={{ color: "accent" }}
+              px={2}
+              py={2}
+              minH="40px"
+              display="inline-flex"
+              alignItems="center"
+            >
               Twitter
             </Link>
-            <Link href={`mailto:${profile.email}`} color="text.muted" _hover={{ color: "accent" }}>
+            <Link
+              href={`mailto:${profile.email}`}
+              color="text.muted"
+              _hover={{ color: "accent" }}
+              px={2}
+              py={2}
+              minH="40px"
+              display="inline-flex"
+              alignItems="center"
+            >
               Email
             </Link>
           </HStack>
