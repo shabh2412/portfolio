@@ -8,10 +8,8 @@ export const profile = {
   location: "India",
   email: "rishabhpanesar@gmail.com",
   phone: "+91 77387 38680",
-  resumeUrl:
-    "https://drive.google.com/file/d/1FEBJh_1TB4UOWtWxz-23-flRbt-gyunJ/view?usp=sharing",
-  resumeDownloadUrl:
-    "https://drive.google.com/uc?export=download&id=1FEBJh_1TB4UOWtWxz-23-flRbt-gyunJ",
+  resumeUrl: "/resume",
+  resumeDownloadUrl: "/resume.pdf",
   socials: {
     github: "https://github.com/shabh2412",
     linkedin: "https://www.linkedin.com/in/rishabh-panesar/",

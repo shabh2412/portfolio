@@ -1,0 +1,22 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/resume", "destination": "/resume/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/resume.pdf",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "Content-Disposition", "value": "inline; filename=\"Rishabh-Panesar-Resume.pdf\"" }
+      ]
+    },
+    {
+      "source": "/resume",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ]
+}
