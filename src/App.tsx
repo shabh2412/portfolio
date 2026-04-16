@@ -8,7 +8,6 @@ import Experience from "./components/sections/Experience";
 import Skills from "./components/sections/Skills";
 import Testimonials from "./components/sections/Testimonials";
 import Lab from "./components/sections/Lab";
-import GitHubActivity from "./components/sections/GitHubActivity";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import "./App.css";
@@ -27,7 +26,6 @@ const App = () => {
         <Skills />
         <Testimonials />
         <Lab />
-        <GitHubActivity />
         <Contact />
       </Box>
       <Footer />
