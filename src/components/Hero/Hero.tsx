@@ -69,13 +69,13 @@ const Hero = () => {
               I'm{" "}
               <Box as="span" color="text" fontWeight={600}>
                 Rishabh
-              </Box>{" "}
-              — a full-stack engineer with 4+ years shipping scalable, high-performance web apps
-              across AI, industrial, and enterprise domains. Currently leading frontend at{" "}
+              </Box>
+              . I ship AI-native products end-to-end. Four years across AI, industrial, and
+              enterprise domains, paired with a relentless focus on performance. Currently at{" "}
               <Link href="https://www.linkedin.com/company/miraei-ai/" isExternal color="accent">
                 Miraei AI
               </Link>
-              . Previously Founding Engineer at Faradworks and frontend lead at Ripik.AI.
+              , owning the build from UI to infra.
             </Text>
           </MotionBox>
 

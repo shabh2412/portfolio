@@ -44,7 +44,7 @@ const Testimonials = () => {
       id="testimonials"
       eyebrow="recommendations"
       title="What peers and collaborators have said."
-      description="Endorsements from engineers I've studied, shipped, and grown alongside — pulled straight from LinkedIn."
+      description="Endorsements from engineers I've studied, shipped, and grown alongside. Pulled straight from LinkedIn."
     >
       <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} gap={5}>
         {testimonials.map((t, i) => (

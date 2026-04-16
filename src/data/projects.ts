@@ -25,10 +25,10 @@ export type Project = {
 export const projects: Project[] = [
   {
     image: myHours,
-    title: "My Hours — Collaborative Time Tracking",
+    title: "My Hours · Collaborative Time Tracking",
     tagline: "Track teams, clients, projects, and billable hours in one place.",
     description:
-      "A production-grade clone of the My Hours time-tracking platform. I owned the frontend architecture — routing, auth, role-based dashboards, and the redux-thunk data layer — and shipped the end-to-end billing and reports flow.",
+      "A production-grade clone of the My Hours time-tracking platform. I owned the frontend architecture (routing, auth, role-based dashboards, and the redux-thunk data layer) and shipped the end-to-end billing and reports flow.",
     role: "Frontend Lead, 5-person team",
     year: "2022",
     category: "Product",
@@ -53,10 +53,10 @@ export const projects: Project[] = [
   },
   {
     image: chattingApp,
-    title: "Realtime Chat — Socket.io + TypeScript",
+    title: "Realtime Chat · Socket.io + TypeScript",
     tagline: "Zero-latency group chat with persistent history.",
     description:
-      "A broadcast chat built on Socket.io with a typed Node + Express backend. Presence, delivery, and history survive reloads and reconnects — I modeled the event contract as a shared TypeScript package between client and server.",
+      "A broadcast chat built on Socket.io with a typed Node + Express backend. Presence, delivery, and history survive reloads and reconnects. I modeled the event contract as a shared TypeScript package between client and server.",
     role: "Solo engineer",
     year: "2022",
     category: "Tool",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
   },
   {
     image: indiamart,
-    title: "IndiaMART — B2B Marketplace Clone",
+    title: "IndiaMART · B2B Marketplace Clone",
     tagline: "Search, browse, and request products across thousands of SKUs.",
     description:
       "A functional clone of India's largest B2B marketplace, built in a one-week sprint. I focused on the product discovery experience: faceted search, product detail, and the request-quote flow.",
@@ -85,7 +85,7 @@ export const projects: Project[] = [
   },
   {
     image: fraazoClone,
-    title: "Fraazo — Hyperlocal Grocery",
+    title: "Fraazo · Hyperlocal Grocery",
     tagline: "End-to-end e-commerce: browse, cart, checkout, payment.",
     description:
       "A fully-functional clone of Fraazo, covering the complete shopping journey. I built the product listing, details, and deal-of-the-day modules, including a randomised-inventory engine.",
@@ -98,7 +98,7 @@ export const projects: Project[] = [
   },
   {
     image: todoTsx,
-    title: "Typed Todos — Redux + TypeScript",
+    title: "Typed Todos · Redux + TypeScript",
     tagline: "A reference CRUD app with a rigorously typed store.",
     description:
       "A small but careful reference implementation: fully typed actions, selectors, and thunks against a JSON-server backend, with Chakra UI primitives and an accessible keyboard-first UX.",
@@ -111,8 +111,8 @@ export const projects: Project[] = [
   },
   {
     image: weatherApp,
-    title: "Weather — Geolocation + Debounced Search",
-    tagline: "Your weather, wherever you are — with 300ms debounced search.",
+    title: "Weather · Geolocation + Debounced Search",
+    tagline: "Your weather, wherever you are, with 300ms debounced search.",
     description:
       "A small app used to teach debouncing, geolocation, and network-efficient UX. Uses the browser Geolocation API and OpenWeatherMap, with request cancellation on quick typing.",
     role: "Solo",
@@ -140,7 +140,7 @@ export const projects: Project[] = [
     title: "Array / Stack Visualiser",
     tagline: "See the data structure, not just the code.",
     description:
-      "A teaching tool I built while internalising JavaScript prototypes and stacks: push, pop, peek, size, reverse — rendered as live visual state.",
+      "A teaching tool I built while internalising JavaScript prototypes and stacks: push, pop, peek, size, reverse, rendered as live visual state.",
     role: "Solo",
     year: "2021",
     category: "Learning",

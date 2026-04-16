@@ -19,7 +19,7 @@ const Skills = () => {
       id="skills"
       eyebrow="toolbox"
       title="The stack I reach for."
-      description="I stay opinionated about the tools I use — they reward care, compound well, and stay out of the user's way."
+      description="I stay opinionated about the tools I use. They reward care, compound well, and stay out of the user's way."
     >
       <Grid templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }} gap={6}>
         {skillGroups.map((g, i) => (

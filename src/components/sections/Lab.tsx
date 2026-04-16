@@ -42,7 +42,7 @@ const Lab = () => {
               <Box overflow="hidden" borderBottom="1px solid" borderColor="border">
                 <Image
                   src={p.image}
-                  alt={`${p.title} — ${p.tagline}`}
+                  alt={`${p.title}. ${p.tagline}`}
                   w="full"
                   h={{ base: "150px", md: "180px" }}
                   objectFit="cover"

@@ -18,7 +18,7 @@ const GitHubActivity = () => {
       id="github"
       eyebrow="open source"
       title="I ship in public."
-      description="A year of commits, plus a few stats from my GitHub — receipts for the craft, not a popularity contest."
+      description="A year of commits, plus a few stats from my GitHub. Receipts for the craft, not a popularity contest."
     >
       <Grid templateColumns={{ base: "1fr", lg: "1.3fr 1fr" }} gap={6}>
         <Reveal>

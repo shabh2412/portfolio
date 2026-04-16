@@ -6,7 +6,6 @@ import About from "./components/sections/About";
 import CaseStudies from "./components/sections/CaseStudies";
 import Experience from "./components/sections/Experience";
 import Skills from "./components/sections/Skills";
-import Principles from "./components/sections/Principles";
 import Testimonials from "./components/sections/Testimonials";
 import Lab from "./components/sections/Lab";
 import GitHubActivity from "./components/sections/GitHubActivity";
@@ -26,7 +25,6 @@ const App = () => {
         <CaseStudies />
         <Experience />
         <Skills />
-        <Principles />
         <Testimonials />
         <Lab />
         <GitHubActivity />

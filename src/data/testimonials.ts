@@ -42,7 +42,7 @@ export const testimonials: Testimonial[] = [
     company: "AI & LLM Experiments",
     relation: "Studied together",
     quote:
-      "Rishabh is a very hardworking guy. Desperate of learning new technologies. He loves to be updated with modern technologies. I have also seen him working across different domains — strong in cooperation and leadership.",
+      "Rishabh is a very hardworking guy. Desperate of learning new technologies. He loves to be updated with modern technologies. I have also seen him working across different domains. Strong in cooperation and leadership.",
     linkedin: "https://www.linkedin.com/in/shubhamrajpurohit/",
   },
   {
@@ -60,7 +60,7 @@ export const testimonials: Testimonial[] = [
     company: "Machine Learning & Statistical Genomics",
     relation: "Studied together",
     quote:
-      "A very hardworking person — gives his 100% effort in whatever he takes up. Always ready to learn something new and take up new challenges.",
+      "A very hardworking person. Gives his 100% effort in whatever he takes up. Always ready to learn something new and take up new challenges.",
     linkedin: "https://www.linkedin.com/in/rashmi-maurya/",
   },
 ];

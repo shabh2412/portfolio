@@ -78,7 +78,7 @@ const Contact = () => {
                   ?
                 </Heading>
                 <Text color="text.muted" fontSize={{ base: "md", md: "lg" }} maxW="xl">
-                  I'm open to senior frontend and product engineering roles — full-time, freelance,
+                  I'm open to senior frontend and product engineering roles: full-time, freelance,
                   or a paid trial. I reply to every message within 24 hours.
                 </Text>
 

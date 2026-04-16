@@ -22,7 +22,7 @@ const CaseStudies = () => {
       id="work"
       eyebrow="selected work"
       title="Enterprise & AI products I've shipped."
-      description="A few surfaces I've owned recently — from Faradworks' founding-team pilots to Ripik's industrial AI platform, to my current work at Miraei AI."
+      description="A few surfaces I've owned recently. From Faradworks' founding-team pilots to Ripik's industrial AI platform, to my current work at Miraei AI."
     >
       <VStack spacing={{ base: 8, md: 12 }} align="stretch">
         {caseStudies.map((c, i) => (

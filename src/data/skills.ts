@@ -13,7 +13,7 @@ const devPlain = (slug: string) =>
 export const skillGroups: SkillGroup[] = [
   {
     title: "Frontend",
-    caption: "The surface people touch — where I spend most of my time.",
+    caption: "The surface people touch. Where I spend most of my time.",
     items: [
       { name: "React", icon: dev("react") },
       { name: "Next.js", icon: devPlain("nextjs") },
@@ -70,38 +70,5 @@ export const skillGroups: SkillGroup[] = [
       { name: "OAuth / Clerk / Auth0 / Okta", icon: dev("javascript") },
       { name: "Metabase", icon: dev("javascript") },
     ],
-  },
-];
-
-export const principles = [
-  {
-    title: "Config-driven systems",
-    body: "Enterprise deployments shouldn't require engineers for every tweak. I design surfaces that are reconfigurable via JSON — scalable by construction, not bolted on later.",
-    icon: "sparkles",
-  },
-  {
-    title: "Performance as a feature",
-    body: "Memoization, virtualization, SSR, image pipelines, bundle budgets. Measured wins: 47% faster page loads on the Faradworks flagship, 2× faster iteration velocity on shared UI.",
-    icon: "zap",
-  },
-  {
-    title: "Types as documentation",
-    body: "Rigorous TypeScript, discriminated unions, and narrow component contracts so future-me and the team can read the code instead of archaeology it.",
-    icon: "braces",
-  },
-  {
-    title: "AI-augmented engineering",
-    body: "I use Windsurf, Claude, Gemini, and Vercel AI SDK to compress the loop from idea to production — without outsourcing the thinking or the taste.",
-    icon: "target",
-  },
-  {
-    title: "Small, reversible steps",
-    body: "Short-lived branches, small PRs, feature flags, and behind-the-scenes refactors. I ship in increments so users never feel the plumbing change.",
-    icon: "git",
-  },
-  {
-    title: "Ownership, end to end",
-    body: "From RFC and architecture to rollback plan. I partner tightly with founders, design, backend, and data — and stay with a surface until it sticks.",
-    icon: "access",
   },
 ];
