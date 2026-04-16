@@ -17,7 +17,7 @@ const Footer = () => {
               Rishabh Panesar
             </Text>
             <Text fontSize="sm" color="text.muted" mt={1}>
-              Senior Frontend Engineer · {profile.location}
+              {profile.location}
             </Text>
           </Box>
           <HStack spacing={5} fontSize="sm" flexWrap="wrap">

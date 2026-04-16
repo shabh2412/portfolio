@@ -45,7 +45,7 @@ const Hero = () => {
           textAlign={{ base: "center", md: "left" }}
         >
           <MotionBox {...fadeUp(0)}>
-            <Pill label="Available for senior frontend roles" pulse dotColor="#34d399" />
+            <Pill label="Shipping at Miraei AI" pulse dotColor="#34d399" />
           </MotionBox>
 
           <MotionHeading

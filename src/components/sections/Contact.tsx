@@ -61,7 +61,7 @@ const Contact = () => {
                   textTransform="uppercase"
                   letterSpacing="0.18em"
                 >
-                  Let's build something
+                  Say hi
                 </Text>
                 <Heading
                   as="h2"
@@ -69,17 +69,14 @@ const Contact = () => {
                   lineHeight="1.05"
                   color="text"
                 >
-                  Got a product that needs
-                  <br />
-                  a{" "}
+                  Working on something{" "}
                   <Box as="span" className="rp-gradient-text">
-                    senior frontend
+                    interesting
                   </Box>
                   ?
                 </Heading>
                 <Text color="text.muted" fontSize={{ base: "md", md: "lg" }} maxW="xl">
-                  I'm open to senior frontend and product engineering roles: full-time, freelance,
-                  or a paid trial. I reply to every message within 24 hours.
+                  If you're building something interesting, I'd love to hear about it. Say hi.
                 </Text>
 
                 <HStack spacing={3} pt={2} flexWrap="wrap">

@@ -1,12 +1,11 @@
 export const profile = {
   name: "Rishabh Panesar",
   handle: "shabh2412",
-  title: "Senior Full-Stack & Frontend Engineer",
+  title: "Full-stack engineer. Ships end-to-end.",
   tagline: "I design and ship fast, delightful web products.",
   subtitle:
     "Full-stack engineer with 4+ years shipping scalable, high-performance web apps across AI, industrial, and enterprise domains. Currently leading frontend at Miraei AI.",
   location: "India",
-  availability: "Open to senior frontend & full-stack engineering roles",
   email: "rishabhpanesar@gmail.com",
   phone: "+91 77387 38680",
   resumeUrl:
