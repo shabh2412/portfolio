@@ -4,7 +4,6 @@ import {
   Grid,
   Heading,
   HStack,
-  Icon,
   Link,
   Text,
   VStack,
@@ -17,6 +16,7 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
+import { Icon } from "../ui/Icon";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
 import { profile } from "../../data/profile";
@@ -135,7 +135,7 @@ const Contact = () => {
                         display="grid"
                         placeItems="center"
                       >
-                        <Icon as={c.icon} />
+                        <Icon icon={c.icon} />
                       </Box>
                       <Box flex={1} minW={0}>
                         <Text fontSize="xs" color="text.dim" className="rp-font-mono">

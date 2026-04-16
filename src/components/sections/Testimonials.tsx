@@ -1,37 +1,32 @@
 import { Box, Grid, HStack, Link, Text, VStack } from "@chakra-ui/react";
+import { RiDoubleQuotesL } from "react-icons/ri";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
+import { Icon } from "../ui/Icon";
 import { testimonials } from "../../data/testimonials";
 
-const Quote = () => (
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path
-      d="M9.58 8.34c.36-.1.68-.15.97-.15 1 0 1.72.58 2.18 1.74.47 1.16.7 2.52.7 4.08 0 1.56-.43 2.84-1.28 3.84-.86 1-2 1.5-3.44 1.5-1.44 0-2.58-.5-3.44-1.5C4.43 16.84 4 15.56 4 14c0-1.56.43-2.84 1.28-3.84.52-.6 1.14-1.02 1.86-1.26l2.44-.56zm11 0c.36-.1.68-.15.97-.15 1 0 1.72.58 2.18 1.74.47 1.16.7 2.52.7 4.08 0 1.56-.43 2.84-1.28 3.84-.86 1-2 1.5-3.44 1.5-1.44 0-2.58-.5-3.44-1.5-.86-1-1.29-2.28-1.29-3.84 0-1.56.43-2.84 1.28-3.84.52-.6 1.14-1.02 1.86-1.26l2.46-.56z"
-      fill="currentColor"
-      opacity="0.4"
-    />
-  </svg>
-);
-
-const Initials = ({ name }: { name: string }) => {
+const Avatar = ({ name }: { name: string }) => {
   const initials = name
     .split(" ")
     .map((n) => n[0])
     .slice(0, 2)
-    .join("");
+    .join("")
+    .toUpperCase();
   return (
     <Box
-      w={11}
-      h={11}
+      w={12}
+      h={12}
       rounded="full"
       display="grid"
       placeItems="center"
       background="var(--gradient)"
       color="#0a0b12"
-      fontWeight={700}
-      fontSize="sm"
+      fontWeight={800}
+      fontSize="md"
       className="rp-font-display"
+      letterSpacing="-0.04em"
       flexShrink={0}
+      boxShadow="0 6px 20px -8px rgba(94, 234, 212, 0.5)"
     >
       {initials}
     </Box>
@@ -51,20 +46,21 @@ const Testimonials = () => {
           <Reveal key={t.name} delay={i * 0.04}>
             <Box
               className="rp-card"
-              p={{ base: 5, md: 7 }}
+              p={{ base: 6, md: 7 }}
               h="full"
               display="flex"
               flexDirection="column"
               justifyContent="space-between"
+              position="relative"
             >
-              <Box color="accent" mb={3}>
-                <Quote />
+              <Box color="accent" opacity={0.4} mb={4} display="inline-flex">
+                <Icon icon={RiDoubleQuotesL} size={30} />
               </Box>
               <Text color="text" fontSize={{ base: "sm", md: "md" }} lineHeight="1.75" mb={6}>
-                "{t.quote}"
+                {t.quote}
               </Text>
               <HStack spacing={3} align="center">
-                <Initials name={t.name} />
+                <Avatar name={t.name} />
                 <VStack align="start" spacing={0} minW={0}>
                   {t.linkedin ? (
                     <Link

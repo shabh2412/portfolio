@@ -1,17 +1,9 @@
-import {
-  Box,
-  Grid,
-  Heading,
-  HStack,
-  Image,
-  Text,
-  Tooltip,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
+import { Box, Grid, Heading, HStack, Text, Tooltip, Wrap, WrapItem } from "@chakra-ui/react";
 import Section from "../ui/Section";
 import Reveal from "../ui/Reveal";
+import { Icon } from "../ui/Icon";
 import { skillGroups } from "../../data/skills";
+import { skillIcons, fallbackIcon } from "../../data/skillIcons";
 
 const Skills = () => {
   return (
@@ -37,28 +29,37 @@ const Skills = () => {
                 {g.caption}
               </Text>
               <Wrap spacing={3}>
-                {g.items.map((it) => (
-                  <WrapItem key={it.name}>
-                    <Tooltip label={it.name} hasArrow bg="bg.elev2" color="text">
-                      <HStack
-                        spacing={2}
-                        px={3}
-                        py={2}
-                        border="1px solid"
-                        borderColor="border"
-                        rounded="md"
-                        bg="whiteAlpha.50"
-                        transition="all 0.2s"
-                        _hover={{ borderColor: "accent", bg: "whiteAlpha.100", transform: "translateY(-2px)" }}
-                      >
-                        <Image src={it.icon} alt={it.name} w={5} h={5} />
-                        <Text fontSize="sm" color="text">
-                          {it.name}
-                        </Text>
-                      </HStack>
-                    </Tooltip>
-                  </WrapItem>
-                ))}
+                {g.items.map((name) => {
+                  const def = skillIcons[name] ?? fallbackIcon;
+                  return (
+                    <WrapItem key={name}>
+                      <Tooltip label={name} hasArrow bg="bg.elev2" color="text">
+                        <HStack
+                          spacing={2.5}
+                          px={3.5}
+                          py={2}
+                          border="1px solid"
+                          borderColor="border"
+                          rounded="md"
+                          bg="whiteAlpha.50"
+                          transition="all 0.2s"
+                          _hover={{
+                            borderColor: "accent",
+                            bg: "whiteAlpha.100",
+                            transform: "translateY(-2px)",
+                          }}
+                        >
+                          <Box as="span" color={def.color} display="inline-flex">
+                            <Icon icon={def.icon} size={18} />
+                          </Box>
+                          <Text fontSize="sm" color="text">
+                            {name}
+                          </Text>
+                        </HStack>
+                      </Tooltip>
+                    </WrapItem>
+                  );
+                })}
               </Wrap>
             </Box>
           </Reveal>
